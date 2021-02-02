@@ -1,29 +1,49 @@
-import logo from './logo.svg'
-import './App.css'
+import React from "react";
+import { css, Global } from "@emotion/react";
+import "antd/dist/antd.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit 
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
-}
+import Router from "./routes";
 
-export default App
+const App = () => (
+  <>
+    <Global
+      styles={css`
+        @font-face {
+          font-family: "anuphan";
+          src: url("/font/anuphan-regular.ttf");
+          font-weight: 400;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "anuphan";
+          src: url("/font/anuphan-bold.ttf");
+          font-weight: 700;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "anuphan";
+          src: url("/font/anuphan-medium.ttf");
+          font-weight: 500;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: "anuphan";
+          src: url("/font/anuphan-extralight.ttf");
+          font-weight: 300;
+          font-display: swap;
+        }
+
+        body {
+          margin: 0;
+          font-family: "anuphan";
+        }
+      `}
+    />
+    <Router />
+  </>
+);
+
+export default App;
