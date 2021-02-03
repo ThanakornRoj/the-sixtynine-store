@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const ChartBox = styled.div`
   margin-top: 24px;
@@ -8,9 +8,8 @@ export const ChartBox = styled.div`
 `;
 
 export const ChartContainer = styled.div`
-  padding: 0 24px;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  height: 190px;
+  padding-bottom: 5px;
 
   .recharts-default-legend {
     display: none;
@@ -21,7 +20,4 @@ export const ChartContainer = styled.div`
     display: none;
   }
 
-  .recharts-dot {
-    fill: red;
-  }
 `;

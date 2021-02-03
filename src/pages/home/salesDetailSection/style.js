@@ -55,7 +55,7 @@ export const ProductContainer = styled.div`
 `;
 
 export const ScrollContainer = styled.div`
-  height: 305px;
+  height: 290px;
   overflow: auto;
 
   p {
@@ -77,7 +77,6 @@ export const ProductBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 5px;
   border-bottom: 1px solid #ededed;
 
   .flex {

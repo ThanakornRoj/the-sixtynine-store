@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const Container = styled.div`
   position: relative;
@@ -24,12 +24,46 @@ export const HeaderSection = styled.div`
     padding-top: 2px;
     box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
   }
+
+  .ant-radio-button-wrapper:hover {
+    color: #f26736;
+  }
+
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+    background-color: #f26736;
+  }
+
+  .ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
+    border-color: #f26736;
+  }
+
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+    color: #f26736;
+    border-color: #f26736;
+  }
+
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: #f26736;
+    border-color: #f26736;
+  }
+
+  .ant-picker {
+    margin-left: 16px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .ant-picker-input > input {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+  }
 `;
 
-export const ButtonFilter  = styled.div`
+export const ButtonFilter = styled.div`
   display: flex;
   justify-content: space-around;
 `;
 
-export const ContentContainer = styled.div`
-`;
+export const ContentContainer = styled.div``;

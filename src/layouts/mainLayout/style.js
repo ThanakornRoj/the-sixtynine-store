@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const MainLayoutContainer = styled.div`
   position: relative;
@@ -35,7 +35,8 @@ export const MainLayoutContainer = styled.div`
     height: 55px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #2973ca;
+    color: #fff;
+    border-color: #2973ca;
   }
 
   .ant-menu-dark.ant-menu-inline .ant-menu-item,

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const ChartBox = styled.div`
   background: #fff;
@@ -11,13 +11,16 @@ export const ChartContainer = styled.div`
   display: flex;
   justify-content: center;
 
-  .ant-progress-circle .ant-progress-inner {
-    width: 85px !important;
-    height: 85px !important;
+  p {
+    font-weight: 600;
   }
 
-  .ant-progress-circle .ant-progress-text {
-    display: none;
+  .ant-progress-circle-path {
+    stroke-dashoffset: -11px !important;
+  }
+
+  .ant-progress {
+    transform: rotate(-10deg);
   }
 `;
 

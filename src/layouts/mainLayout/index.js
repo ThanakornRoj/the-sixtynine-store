@@ -1,7 +1,7 @@
-import React from 'react';
-import { Layout, Menu, Badge } from 'antd';
+import React from "react";
+import { Layout, Menu, Badge } from "antd";
 
-import Logo from '../../icons/logo.svg';
+import Logo from "../../icons/logo.svg";
 
 import {
   CompanyBanner,
@@ -9,7 +9,7 @@ import {
   DashBoard,
   HeaderContent,
   MainLayoutContainer,
-} from './style';
+} from "./style";
 
 const MainLayout = ({ children }) => {
   const { Header, Content, Sider } = Layout;
@@ -17,14 +17,14 @@ const MainLayout = ({ children }) => {
 
   return (
     <MainLayoutContainer>
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ minHeight: "100vh" }}>
         <Sider width={250}>
           <CompanyBanner>
             <img src={Logo} alt="" />
             <CompanyName>sixtynine store</CompanyName>
             <DashBoard>dashboard</DashBoard>
           </CompanyBanner>
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
             <Menu.Item key="1">dashboard</Menu.Item>
 
             <Menu.Item key="2">order</Menu.Item>
@@ -37,23 +37,23 @@ const MainLayout = ({ children }) => {
 
             <SubMenu key="sub2" title="product">
               <Menu.Item key="6">Team 1</Menu.Item>
-              <Menu.Item key="8">Team 2</Menu.Item>
+              <Menu.Item key="7">Team 2</Menu.Item>
             </SubMenu>
 
             <SubMenu key="sub3" title="member">
-              <Menu.Item key="6">Team 1</Menu.Item>
-              <Menu.Item key="8">Team 2</Menu.Item>
+              <Menu.Item key="8">Team 1</Menu.Item>
+              <Menu.Item key="9">Team 2</Menu.Item>
             </SubMenu>
 
-            <Menu.Item key="3">reporting</Menu.Item>
+            <Menu.Item key="10">reporting</Menu.Item>
 
-            <Menu.Item key="4" className="log-out">
+            <Menu.Item key="11" className="log-out">
               reporting
             </Menu.Item>
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ padding: '22px 32px' }}>
+          <Header style={{ padding: "22px 32px" }}>
             <HeaderContent>
               <Badge dot={true}>
                 <svg
@@ -72,7 +72,7 @@ const MainLayout = ({ children }) => {
               </Badge>
             </HeaderContent>
           </Header>
-          <Content style={{ margin: '24px 32px' }}>{children}</Content>
+          <Content style={{ margin: "24px 32px" }}>{children}</Content>
         </Layout>
       </Layout>
     </MainLayoutContainer>

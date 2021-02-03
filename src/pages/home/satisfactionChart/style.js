@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const ChartBox = styled.div`
   background: #fff;
@@ -8,9 +8,8 @@ export const ChartBox = styled.div`
 `;
 
 export const ChartContainer = styled.div`
-  padding: 0 24px;
-  padding-top: 11px;
-  padding-bottom: 20px;
+  height: 185px;
+  padding-bottom: 5px;
 
   .recharts-default-legend {
     display: none;
@@ -21,15 +20,14 @@ export const ChartContainer = styled.div`
     display: none;
   }
 
-  .recharts-tooltip-wrapper
-    .recharts-tooltip-wrapper-right
-    .recharts-tooltip-wrapper-bottom {
-    visibility: visible !important;
+  .recharts-responsive-container {
+    height: 76% !important;
   }
 `;
 
 export const OverAll = styled.p`
   font-size: 10px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin: 15px 0;
+  margin-left: 24px;
 `;

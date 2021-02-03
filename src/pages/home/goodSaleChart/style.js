@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const ChartBox = styled.div`
   background: #fff;
@@ -7,10 +7,8 @@ export const ChartBox = styled.div`
 `;
 
 export const ChartContainer = styled.div`
-  padding: 0 24px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-
+  height: 190px;
+  padding-bottom: 5px;
   .recharts-default-legend {
     display: none;
   }
