@@ -40,6 +40,42 @@ const App = () => (
           margin: 0;
           font-family: "anuphan";
         }
+
+        .ant-picker-cell-in-view.ant-picker-cell-today
+          .ant-picker-cell-inner::before {
+          border: 1px solid #f26736;
+        }
+
+        .ant-picker-cell-in-view.ant-picker-cell-selected
+          .ant-picker-cell-inner,
+        .ant-picker-cell-in-view.ant-picker-cell-range-start
+          .ant-picker-cell-inner,
+        .ant-picker-cell-in-view.ant-picker-cell-range-end
+          .ant-picker-cell-inner {
+          background: #f26736;
+        }
+
+        .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before {
+          background: #fbc9b7;
+        }
+
+        .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+          background: #fbc9b7;
+        }
+
+        .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before,
+        .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before,
+        .ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before,
+        .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single).ant-picker-cell-range-hover-start::before,
+        .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single).ant-picker-cell-range-hover-end::before,
+        .ant-picker-panel
+          > :not(.ant-picker-date-panel)
+          .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before,
+        .ant-picker-panel
+          > :not(.ant-picker-date-panel)
+          .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before {
+          background: #fbc9b7;
+        }
       `}
     />
     <Router />
