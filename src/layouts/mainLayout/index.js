@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout, Menu, Badge } from "antd";
 
 import Logo from "../../icons/logo.svg";
@@ -11,9 +12,11 @@ import {
   MainLayoutContainer,
 } from "./style";
 
+const { Header, Content, Sider } = Layout;
+const { SubMenu } = Menu;
+
 const MainLayout = ({ children }) => {
-  const { Header, Content, Sider } = Layout;
-  const { SubMenu } = Menu;
+  let keyMenu = children?.type?.name ?? "dashboard";
 
   return (
     <MainLayoutContainer>
@@ -24,8 +27,16 @@ const MainLayout = ({ children }) => {
             <CompanyName>sixtynine store</CompanyName>
             <DashBoard>dashboard</DashBoard>
           </CompanyBanner>
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <Menu.Item key="1">dashboard</Menu.Item>
+          <Menu
+            theme="dark"
+            defaultSelectedKeys={[keyMenu]}
+            defaultOpenKeys={["memberManage"]}
+            mode="inline"
+          >
+            <Menu.Item key="dashboard">
+              <Link to="/" />
+              dashboard
+            </Menu.Item>
 
             <Menu.Item key="2">order</Menu.Item>
 
@@ -40,9 +51,19 @@ const MainLayout = ({ children }) => {
               <Menu.Item key="7">Team 2</Menu.Item>
             </SubMenu>
 
-            <SubMenu key="sub3" title="member">
-              <Menu.Item key="8">Team 1</Menu.Item>
-              <Menu.Item key="9">Team 2</Menu.Item>
+            <SubMenu key="memberManage" title="member">
+              <Menu.Item key="memberLists">
+                <Link to="/manage-user" />
+                member lists
+              </Menu.Item>
+              <Menu.Item key="memberAction">
+                <Link to="/member-action" />
+                member action
+              </Menu.Item>
+              <Menu.Item key="memberAdmin">
+                <Link to="/manage-admin" />
+                member admin
+              </Menu.Item>
             </SubMenu>
 
             <Menu.Item key="10">reporting</Menu.Item>
