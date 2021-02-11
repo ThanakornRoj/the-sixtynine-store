@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Badge } from "antd";
+import { useLocation } from "react-router-dom";
 
 import Logo from "../../icons/logo.svg";
 
@@ -17,6 +18,25 @@ const { SubMenu } = Menu;
 
 const MainLayout = ({ children }) => {
   let keyMenu = children?.type?.name ?? "dashboard";
+  let subKeyMenu = children?.type?.name ?? "";
+  const location = useLocation();
+  console.log(location.pathname);
+
+  if (location.pathname === "/manage-user") {
+    keyMenu = children?.type?.name ?? "memberLists";
+  } else if (location.pathname === "/member-action") {
+    keyMenu = children?.type?.name ?? "memberAction";
+  } else if (location.pathname === "/manage-admin") {
+    keyMenu = children?.type?.name ?? "memberAdmin";
+  }
+
+  if (
+    location.pathname === "/manage-user" ||
+    location.pathname === "/member-action" ||
+    location.pathname === "/manage-admin"
+  ) {
+    subKeyMenu = children?.type?.name ?? "memberManage";
+  }
 
   return (
     <MainLayoutContainer>
@@ -30,7 +50,7 @@ const MainLayout = ({ children }) => {
           <Menu
             theme="dark"
             defaultSelectedKeys={[keyMenu]}
-            defaultOpenKeys={["memberManage"]}
+            defaultOpenKeys={[subKeyMenu]}
             mode="inline"
           >
             <Menu.Item key="dashboard">
@@ -52,24 +72,26 @@ const MainLayout = ({ children }) => {
             </SubMenu>
 
             <SubMenu key="memberManage" title="member">
-              <Menu.Item key="memberLists">
+              <Menu.Item key="memberLists" className="sub-menu-background">
                 <Link to="/manage-user" />
                 member lists
               </Menu.Item>
-              <Menu.Item key="memberAction">
+              <Menu.Item key="memberAction" className="sub-menu-background">
                 <Link to="/member-action" />
                 member action
               </Menu.Item>
-              <Menu.Item key="memberAdmin">
+              <Menu.Item key="memberAdmin" className="sub-menu-background">
                 <Link to="/manage-admin" />
                 member admin
               </Menu.Item>
             </SubMenu>
 
-            <Menu.Item key="10">reporting</Menu.Item>
+            <Menu.Item key="10" className="last-menu">
+              reporting
+            </Menu.Item>
 
             <Menu.Item key="11" className="log-out">
-              reporting
+              Log out
             </Menu.Item>
           </Menu>
         </Sider>

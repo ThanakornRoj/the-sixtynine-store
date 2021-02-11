@@ -26,7 +26,7 @@ export const MainLayoutContainer = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    height: 70%;
+    height: 81%;
     position: relative;
   }
 
@@ -63,6 +63,14 @@ export const MainLayoutContainer = styled.div`
     bottom: 0;
     border-top: 1px solid #2973ca;
     border-bottom: 1px solid #2973ca;
+  }
+
+  .sub-menu-background {
+    background: #02479b;
+  }
+
+  .last-menu {
+    border: 1px solid #2973ca;
   }
 `;
 
