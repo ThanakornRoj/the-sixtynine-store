@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Layout, Menu, Badge } from "antd";
 
 import Logo from "../../icons/logo.svg";
@@ -35,9 +36,17 @@ const MainLayout = ({ children }) => {
               <Menu.Item key="5">Alex</Menu.Item>
             </SubMenu>
 
-            <SubMenu key="sub2" title="product">
-              <Menu.Item key="6">Team 1</Menu.Item>
-              <Menu.Item key="7">Team 2</Menu.Item>
+            <SubMenu key="manageProduct" title="product">
+              <Menu.Item key="productLists" className="sub-menu-background">
+                <Link to="/product-lists" />
+                product lists
+              </Menu.Item>
+              <Menu.Item key="addProduct" className="sub-menu-background">
+                add product
+              </Menu.Item>
+              <Menu.Item key="categories" className="sub-menu-background">
+                Categories
+              </Menu.Item>
             </SubMenu>
 
             <SubMenu key="sub3" title="member">

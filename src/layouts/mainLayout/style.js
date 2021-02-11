@@ -4,6 +4,9 @@ export const MainLayoutContainer = styled.div`
   position: relative;
   z-index: 0;
 
+  .sub-menu-background {
+    background: #02479b;
+  }
   .ant-layout-header {
     background: #fff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
@@ -26,7 +29,7 @@ export const MainLayoutContainer = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    height: 70%;
+    height: 75%;
     position: relative;
   }
 
