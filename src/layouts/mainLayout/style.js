@@ -27,6 +27,7 @@ export const MainLayoutContainer = styled.div`
     font-size: 12px;
     font-weight: 700;
     height: 81%;
+    max-height: 681px;
     position: relative;
   }
 
@@ -101,6 +102,8 @@ export const DashBoard = styled.p`
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
+  text-transform: uppercase;
+  margin-top: 2px;
 `;
 
 export const HeaderContent = styled.div`

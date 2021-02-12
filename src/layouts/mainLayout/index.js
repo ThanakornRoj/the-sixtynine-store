@@ -61,9 +61,15 @@ const MainLayout = ({ children }) => {
             <Menu.Item key="2">order</Menu.Item>
 
             <SubMenu key="sub1" title="edit page">
-              <Menu.Item key="3">Tom</Menu.Item>
-              <Menu.Item key="4">Bill</Menu.Item>
-              <Menu.Item key="5">Alex</Menu.Item>
+              <Menu.Item key="3" className="sub-menu-background">
+                Tom
+              </Menu.Item>
+              <Menu.Item key="4" className="sub-menu-background">
+                Bill
+              </Menu.Item>
+              <Menu.Item key="5" className="sub-menu-background">
+                Alex
+              </Menu.Item>
             </SubMenu>
 
             <SubMenu key="sub2" title="product">
