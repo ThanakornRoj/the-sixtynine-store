@@ -26,36 +26,7 @@ const ManageAdmin = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [assignAdmin, setAssignAdmin] = useState(false);
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
-
-  const rowSelection = {
-    selectedRowKeys,
-    onChange: setSelectedRowKeys,
-  };
-
-  const handleShowModal = () => {
-    setModalVisible(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalVisible(false);
-  };
-
-  const handleAssignAdmin = () => {
-    setAssignAdmin(true);
-  };
-
-  const handleConfirmAssignAdmin = () => {
-    setAssignAdmin(false);
-  };
-
-  const onChange = (pagination, filters, sorter, extra) => {
-    console.log("params", pagination, filters, sorter, extra);
-  };
-
-  const handlechanage = (value) => {
-    console.log(`selected ${value}`);
-  };
-
+  const data = [];
   const columns = [
     {
       title: "Id User",
@@ -96,13 +67,41 @@ const ManageAdmin = () => {
     },
   ];
 
+  const rowSelection = {
+    selectedRowKeys,
+    onChange: setSelectedRowKeys,
+  };
+
+  const handleShowModal = () => {
+    setModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
+  const handleAssignAdmin = () => {
+    setAssignAdmin(true);
+  };
+
+  const handleConfirmAssignAdmin = () => {
+    setAssignAdmin(false);
+  };
+
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
+
+  const handlechanage = (value) => {
+    console.log(`selected ${value}`);
+  };
+
   const renderUserLevel = (i) => {
     if (i % 2 === 0) {
       return <p style={{ color: "#75BA68", marginBottom: "0" }}>User</p>;
     } else return <p style={{ color: "#FAB300", marginBottom: "0" }}>Admin</p>;
   };
 
-  const data = [];
   if (assignAdmin === true) {
     for (let i = 0; i < 50; i++) {
       data.push({

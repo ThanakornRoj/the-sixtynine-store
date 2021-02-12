@@ -16,15 +16,7 @@ import HeaderDashBoard from "../../../components/header";
 const MemberAction = () => {
   const { Option } = Select;
   const { RangePicker } = DatePicker;
-
-  const onChange = (pagination, filters, sorter, extra) => {
-    console.log("params", pagination, filters, sorter, extra);
-  };
-
-  const handlechanage = (value) => {
-    console.log(`selected ${value}`);
-  };
-
+  const data = [];
   const columns = [
     {
       title: "Time",
@@ -74,13 +66,20 @@ const MemberAction = () => {
     },
   ];
 
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
+
+  const handlechanage = (value) => {
+    console.log(`selected ${value}`);
+  };
+
   const renderUserLevel = (i) => {
     if (i % 2 === 0) {
       return <p style={{ color: "#75BA68", marginBottom: "0" }}>User</p>;
     } else return <p style={{ color: "#FAB300", marginBottom: "0" }}>Admin</p>;
   };
 
-  const data = [];
   for (let i = 0; i < 50; i++) {
     data.push({
       key: i,
