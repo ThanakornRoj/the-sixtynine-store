@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout, Menu, Badge } from "antd";
+import { useLocation } from "react-router-dom";
 
 import Logo from "../../icons/logo.svg";
 
@@ -11,9 +13,30 @@ import {
   MainLayoutContainer,
 } from "./style";
 
+const { Header, Content, Sider } = Layout;
+const { SubMenu } = Menu;
+
 const MainLayout = ({ children }) => {
-  const { Header, Content, Sider } = Layout;
-  const { SubMenu } = Menu;
+  let keyMenu = children?.type?.name ?? "dashboard";
+  let subKeyMenu = children?.type?.name ?? "";
+  const location = useLocation();
+  console.log(location.pathname);
+
+  if (location.pathname === "/manage-user") {
+    keyMenu = children?.type?.name ?? "memberLists";
+  } else if (location.pathname === "/member-action") {
+    keyMenu = children?.type?.name ?? "memberAction";
+  } else if (location.pathname === "/manage-admin") {
+    keyMenu = children?.type?.name ?? "memberAdmin";
+  }
+
+  if (
+    location.pathname === "/manage-user" ||
+    location.pathname === "/member-action" ||
+    location.pathname === "/manage-admin"
+  ) {
+    subKeyMenu = children?.type?.name ?? "memberManage";
+  }
 
   return (
     <MainLayoutContainer>
@@ -24,15 +47,29 @@ const MainLayout = ({ children }) => {
             <CompanyName>sixtynine store</CompanyName>
             <DashBoard>dashboard</DashBoard>
           </CompanyBanner>
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <Menu.Item key="1">dashboard</Menu.Item>
+          <Menu
+            theme="dark"
+            defaultSelectedKeys={[keyMenu]}
+            defaultOpenKeys={[subKeyMenu]}
+            mode="inline"
+          >
+            <Menu.Item key="dashboard">
+              <Link to="/" />
+              dashboard
+            </Menu.Item>
 
             <Menu.Item key="2">order</Menu.Item>
 
             <SubMenu key="sub1" title="edit page">
-              <Menu.Item key="3">Tom</Menu.Item>
-              <Menu.Item key="4">Bill</Menu.Item>
-              <Menu.Item key="5">Alex</Menu.Item>
+              <Menu.Item key="3" className="sub-menu-background">
+                Tom
+              </Menu.Item>
+              <Menu.Item key="4" className="sub-menu-background">
+                Bill
+              </Menu.Item>
+              <Menu.Item key="5" className="sub-menu-background">
+                Alex
+              </Menu.Item>
             </SubMenu>
 
             <SubMenu key="sub2" title="product">
@@ -40,15 +77,27 @@ const MainLayout = ({ children }) => {
               <Menu.Item key="7">Team 2</Menu.Item>
             </SubMenu>
 
-            <SubMenu key="sub3" title="member">
-              <Menu.Item key="8">Team 1</Menu.Item>
-              <Menu.Item key="9">Team 2</Menu.Item>
+            <SubMenu key="memberManage" title="member">
+              <Menu.Item key="memberLists" className="sub-menu-background">
+                <Link to="/manage-user" />
+                member lists
+              </Menu.Item>
+              <Menu.Item key="memberAction" className="sub-menu-background">
+                <Link to="/member-action" />
+                member action
+              </Menu.Item>
+              <Menu.Item key="memberAdmin" className="sub-menu-background">
+                <Link to="/manage-admin" />
+                member admin
+              </Menu.Item>
             </SubMenu>
 
-            <Menu.Item key="10">reporting</Menu.Item>
+            <Menu.Item key="10" className="last-menu">
+              reporting
+            </Menu.Item>
 
             <Menu.Item key="11" className="log-out">
-              reporting
+              Log out
             </Menu.Item>
           </Menu>
         </Sider>

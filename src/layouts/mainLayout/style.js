@@ -26,7 +26,8 @@ export const MainLayoutContainer = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    height: 70%;
+    height: 81%;
+    max-height: 681px;
     position: relative;
   }
 
@@ -64,6 +65,14 @@ export const MainLayoutContainer = styled.div`
     border-top: 1px solid #2973ca;
     border-bottom: 1px solid #2973ca;
   }
+
+  .sub-menu-background {
+    background: #02479b;
+  }
+
+  .last-menu {
+    border: 1px solid #2973ca;
+  }
 `;
 
 export const CompanyBanner = styled.div`
@@ -93,6 +102,8 @@ export const DashBoard = styled.p`
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
+  text-transform: uppercase;
+  margin-top: 2px;
 `;
 
 export const HeaderContent = styled.div`
