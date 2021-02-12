@@ -87,6 +87,7 @@ const App = () => (
           background-color: #fbc9b7;
         }
 
+
         .ant-checkbox-input:focus {
           border-color: #fd5c28;
         }
