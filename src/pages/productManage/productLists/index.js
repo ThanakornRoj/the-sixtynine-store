@@ -32,10 +32,6 @@ const ProductLists = () => {
     onChange: setSelectedRowKeys,
   };
 
-  const onChange = (pagination, filters, sorter, extra) => {
-    console.log("params", pagination, filters, sorter, extra);
-  };
-
   const handleDeleteCategories = () => {
     setDeleteCategories(true);
   };
@@ -92,6 +88,10 @@ const ProductLists = () => {
     },
   ];
 
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
+
   for (let i = 0; i < 50; i++) {
     data.push({
       key: i,
@@ -104,7 +104,7 @@ const ProductLists = () => {
 
   return (
     <MainLayout>
-      <HeaderDashBoard text="MEMBER Lists" />
+      <HeaderDashBoard text="Product Lists" />
 
       <Container>
         <Flex>
