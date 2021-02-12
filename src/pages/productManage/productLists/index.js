@@ -27,13 +27,10 @@ import Delete from "../../../icons/del.svg";
 const ProductLists = () => {
   const [deleteCategories, setDeleteCategories] = useState(false);
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const data = [];
   const rowSelection = {
     selectedRowKeys,
     onChange: setSelectedRowKeys,
-  };
-
-  const handleDeleteCategories = () => {
-    setDeleteCategories(true);
   };
 
   const columns = [
@@ -64,7 +61,6 @@ const ProductLists = () => {
     },
   ];
 
-  const data = [];
   const Stock = [
     {
       category: "เครื่องเซิฟเวอร์",
@@ -87,6 +83,10 @@ const ProductLists = () => {
       stock: 26,
     },
   ];
+
+  const handleDeleteCategories = () => {
+    setDeleteCategories(true);
+  };
 
   const onChange = (pagination, filters, sorter, extra) => {
     console.log("params", pagination, filters, sorter, extra);
