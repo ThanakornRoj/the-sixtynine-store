@@ -77,6 +77,17 @@ const App = () => (
           background: #fbc9b7;
         }
 
+        .ant-select-item-option-content {
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+          background-color: #fbc9b7;
+        }
+
+
         .ant-checkbox-input:focus {
           border-color: #fd5c28;
         }
