@@ -87,7 +87,6 @@ const App = () => (
           background-color: #fbc9b7;
         }
 
-
         .ant-checkbox-input:focus {
           border-color: #fd5c28;
         }
@@ -137,6 +136,10 @@ const App = () => (
         .ant-pagination-next:hover .ant-pagination-item-link {
           color: #fd5c28;
           border-color: #fd5c28;
+        }
+
+        .ant-modal-body {
+          padding: 48px;
         }
       `}
     />
