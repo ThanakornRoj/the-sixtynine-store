@@ -14,7 +14,7 @@ export const MainLayoutContainer = styled.div`
 
   .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal)
     .ant-menu-item-selected {
-    background-color: #1d7df0;
+    background-color: #02479b;
   }
 
   .ant-layout-sider-children {

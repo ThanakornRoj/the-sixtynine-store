@@ -7,7 +7,8 @@ import ProductLists from "../pages/productManage/productLists";
 import ManageUser from "../pages/member/mangeUser";
 import MemberAction from "../pages/member/memberAction";
 import ManageAdmin from "../pages/member/menageAdmin";
-
+import EditProduct from "../pages/productManage/editProduct";
+import AddProduct from "../pages/productManage/addProduct";
 
 const Router = () => (
   <BrowserRouter>
@@ -17,6 +18,8 @@ const Router = () => (
       <Route exact path="/manage-user" component={ManageUser} />
       <Route exact path="/member-action" component={MemberAction} />
       <Route exact path="/manage-admin" component={ManageAdmin} />
+      <Route exact path="/edit-product" component={EditProduct} />
+      <Route exact path="/add-product" component={AddProduct} />
     </Switch>
   </BrowserRouter>
 );

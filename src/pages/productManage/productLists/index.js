@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Table, Select, Modal } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 import {
   Container,
@@ -176,8 +176,10 @@ const ProductLists = () => {
   const renderButton = () => {
     return (
       <ButtonContainer>
-        <EditButton>Edit</EditButton>
-        <div onClick={showModalInfo}>
+        <Link to="/edit-product">
+          <EditButton>Edit</EditButton>
+        </Link>
+        <div onClick={showModalInfo} style={{ cursor: "pointer" }}>
           <svg
             width="20"
             height="20"
@@ -192,7 +194,7 @@ const ProductLists = () => {
             />
           </svg>
         </div>
-        <div onClick={showModalDel}>
+        <div onClick={showModalDel} style={{ cursor: "pointer" }}>
           <svg
             width="17"
             height="20"
