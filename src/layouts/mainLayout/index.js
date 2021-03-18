@@ -20,7 +20,6 @@ const MainLayout = ({ children }) => {
   let keyMenu = children?.type?.name ?? "dashboard";
   let subKeyMenu = children?.type?.name ?? "";
   const location = useLocation();
-  console.log(location.pathname);
 
   if (location.pathname === "/manage-user") {
     keyMenu = children?.type?.name ?? "memberLists";
@@ -28,6 +27,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "memberAction";
   } else if (location.pathname === "/manage-admin") {
     keyMenu = children?.type?.name ?? "memberAdmin";
+  } else if (location.pathname === "/order-tracking") {
+    keyMenu = children?.type?.name ?? "orderTracking";
   }
 
   if (
@@ -36,6 +37,10 @@ const MainLayout = ({ children }) => {
     location.pathname === "/manage-admin"
   ) {
     subKeyMenu = children?.type?.name ?? "memberManage";
+  }
+
+  if (location.pathname === "/order-tracking") {
+    subKeyMenu = children?.type?.name ?? "order";
   }
 
   return (
@@ -58,43 +63,40 @@ const MainLayout = ({ children }) => {
               dashboard
             </Menu.Item>
 
-            <Menu.Item key="2">order</Menu.Item>
+            <SubMenu key="order" title="Order">
+              <Menu.Item key="orderTracking">
+                <Link to="/order-tracking" />
+                Order
+              </Menu.Item>
+              <Menu.Item key="orderManage">Order Management</Menu.Item>
+              <Menu.Item key="report">Report</Menu.Item>
+            </SubMenu>
 
             <SubMenu key="sub1" title="edit page">
-              <Menu.Item key="3" className="sub-menu-background">
-                Tom
-              </Menu.Item>
-              <Menu.Item key="4" className="sub-menu-background">
-                Bill
-              </Menu.Item>
-              <Menu.Item key="5" className="sub-menu-background">
-                Alex
-              </Menu.Item>
+              <Menu.Item key="1">Order</Menu.Item>
+              <Menu.Item key="2">Order Management</Menu.Item>
+              <Menu.Item key="3">Report</Menu.Item>
             </SubMenu>
 
             <SubMenu key="manageProduct" title="product">
-              <Menu.Item key="productLists" className="sub-menu-background">
+              <Menu.Item key="productLists">
                 <Link to="/product-lists" />
                 product lists
               </Menu.Item>
-              <Menu.Item key="addProduct" className="sub-menu-background">
-                add product
-              </Menu.Item>
-              <Menu.Item key="categories" className="sub-menu-background">
-                Categories
-              </Menu.Item>
+              <Menu.Item key="addProduct">add product</Menu.Item>
+              <Menu.Item key="categories">Categories</Menu.Item>
             </SubMenu>
 
             <SubMenu key="memberManage" title="member">
-              <Menu.Item key="memberLists" className="sub-menu-background">
+              <Menu.Item key="memberLists">
                 <Link to="/manage-user" />
                 member lists
               </Menu.Item>
-              <Menu.Item key="memberAction" className="sub-menu-background">
+              <Menu.Item key="memberAction">
                 <Link to="/member-action" />
                 member action
               </Menu.Item>
-              <Menu.Item key="memberAdmin" className="sub-menu-background">
+              <Menu.Item key="memberAdmin">
                 <Link to="/manage-admin" />
                 member admin
               </Menu.Item>
