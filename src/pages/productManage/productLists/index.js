@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Table, Select, Modal } from "antd";
+import { Table, Select, Modal, Tag } from "antd";
 import { Link } from "react-router-dom";
 
 import {
@@ -222,7 +222,9 @@ const ProductLists = () => {
       id: `UA${33567 + i}`,
       name: `สินค้าที่ ${i}`,
       category: (
-        <CategoryTag style={{ width: "35%" }}>เครื่องกระจายสัญญาณ</CategoryTag>
+        <Tag color="#fdf0eb" style={{ color: "#fd5c28", borderRadius: "5px" }}>
+          เครื่องกระจายสัญญาณ
+        </Tag>
       ),
       action: renderButton(),
     });

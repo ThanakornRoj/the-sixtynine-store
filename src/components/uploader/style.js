@@ -13,8 +13,8 @@ export const UploadContainer = styled.div`
   }
 
   .ant-upload.ant-upload-select-picture-card {
-    width: 82px;
-    height: 82px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     border: 2px dashed #c4c4c4;
 

@@ -27,23 +27,15 @@ export const Container = styled.div`
   }
 `;
 
-export const StyleSelect = styled(Select)`
-  :focus {
-    box-shadow: none;
-  }
-`;
+export const StyleSelect = styled(Select)``;
 
 export const ContentContainer = styled.div`
   background-color: #fff;
   border-radius: 5px;
   padding: 32px;
   margin-top: 24px;
-  min-height: 82vh;
+  min-height: 100vh;
   position: relative;
-`;
-
-export const Flex = styled.div`
-  display: flex;
 
   .form-row {
     margin-bottom: 32px;
@@ -54,6 +46,15 @@ export const Flex = styled.div`
     justify-content: flex-end;
     align-items: center;
   }
+`;
+
+export const Content = styled.div`
+  width: 60%;
+  margin: 0 auto;
+`;
+
+export const Flex = styled.div`
+  display: flex;
 `;
 
 export const Left = styled.div`
