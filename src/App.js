@@ -79,7 +79,7 @@ const App = () => (
 
         .ant-select-item-option-content {
           font-size: 12px;
-          font-weight: 600;
+          font-weight: 400;
           text-transform: uppercase;
         }
 

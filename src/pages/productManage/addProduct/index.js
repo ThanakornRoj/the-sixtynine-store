@@ -93,7 +93,7 @@ const AddProduct = () => {
               <Flex className="form-row">
                 <Left>
                   <InputHeader>Add To Group เพิ่มเข้ากลุ่ม</InputHeader>
-                  <StyleSelect style={{ width: "100%" }}>
+                  <StyleSelect style={{ width: "100%" }} placeholder="GROUP">
                     {Group.map((text) => (
                       <Option value={text.value}>{text.group}</Option>
                     ))}
@@ -101,7 +101,7 @@ const AddProduct = () => {
                 </Left>
                 <Right>
                   <InputHeader>Category หมวดหมู่</InputHeader>
-                  <StyleSelect style={{ width: "100%" }}>
+                  <StyleSelect style={{ width: "100%" }} placeholder="CATEGORY">
                     {Category.map((text) => (
                       <Option value={text.value}>{text.category}</Option>
                     ))}
@@ -183,7 +183,7 @@ const AddProduct = () => {
                         fill="currentColor"
                       />
                     </svg>
-                    <p>Add Product</p>
+                    <p>Add More Option</p>
                   </AddProductButton>
                 </div>
               </div>

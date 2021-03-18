@@ -16,6 +16,15 @@ export const Container = styled.div`
     width: 100%;
     background-color: #fff;
   }
+
+  .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+  .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const StyleSelect = styled(Select)``;
@@ -77,6 +86,7 @@ export const AddProductButton = styled(Button)`
   font-size: 12px;
   font-weight: 600;
   color: #fff;
+  text-transform: uppercase;
 
   p {
     margin-left: 10px;

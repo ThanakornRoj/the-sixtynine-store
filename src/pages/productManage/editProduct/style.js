@@ -20,7 +20,7 @@ export const Container = styled.div`
   .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
   .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
     display: flex;
     align-items: center;
