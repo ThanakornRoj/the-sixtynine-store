@@ -17,6 +17,12 @@ export const Container = styled.div`
     background-color: #fff;
   }
 
+  .ant-input:hover,
+  .ant-input:focus {
+    border-color: #fd5c28;
+    box-shadow: none;
+  }
+
   .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
   .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
     font-size: 12px;
@@ -24,6 +30,12 @@ export const Container = styled.div`
     text-transform: uppercase;
     display: flex;
     align-items: center;
+  }
+
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border: 1px solid #fd5c28;
+    box-shadow: none;
   }
 `;
 
