@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const MainLayoutContainer = styled.div`
   position: relative;
-  width: 1904px;
+  min-width: 1280px;
   z-index: 0;
 
   .sub-menu-background {
@@ -75,10 +75,6 @@ export const MainLayoutContainer = styled.div`
 
   .last-menu {
     border: 1px solid #2973ca;
-  }
-
-  @media (max-width: 1875.98px) {
-    width: 1875px;
   }
 `;
 

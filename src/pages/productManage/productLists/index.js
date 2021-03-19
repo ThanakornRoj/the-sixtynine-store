@@ -188,8 +188,8 @@ const ProductLists = () => {
           style={{ cursor: "pointer", marginRight: "15px" }}
         >
           <svg
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -203,8 +203,8 @@ const ProductLists = () => {
         </div>
         <div onClick={showModalDel} style={{ cursor: "pointer" }}>
           <svg
-            width="17"
-            height="20"
+            width="22"
+            height="25"
             viewBox="0 0 17 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
