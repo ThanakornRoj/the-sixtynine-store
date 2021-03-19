@@ -179,7 +179,10 @@ const ProductLists = () => {
         <Link to="/edit-product">
           <EditButton>Edit</EditButton>
         </Link>
-        <div onClick={showModalInfo} style={{ cursor: "pointer" }}>
+        <div
+          onClick={showModalInfo}
+          style={{ cursor: "pointer", marginRight: "15px" }}
+        >
           <svg
             width="20"
             height="20"

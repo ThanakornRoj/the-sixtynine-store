@@ -68,6 +68,7 @@ export const EditButton = styled(Button)`
   color: #333333;
   font-size: 12px;
   font-weight: 700;
+  margin-right: 15px;
 
   :hover,
   :focus {
