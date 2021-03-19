@@ -56,6 +56,8 @@ export const Container = styled.div`
 
   .ant-tag-orange {
     border-color: #fd5c28;
+    color: #fd5c28;
+    background-color: #fdf0eb;
     border-radius: 5px;
   }
 `;
