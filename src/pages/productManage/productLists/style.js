@@ -182,9 +182,10 @@ export const RightContent = styled.div`
   }
 `;
 
-export const ConfirmButton = styled.div`
+export const ConfirmButton = styled(Button)`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 150px;
   height: 38px;
   border: 1px solid #333333;
@@ -202,9 +203,10 @@ export const ConfirmButton = styled.div`
   }
 `;
 
-export const CancelButton = styled.div`
+export const CancelButton = styled(Button)`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 150px;
   height: 38px;
   border: none;

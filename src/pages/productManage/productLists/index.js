@@ -127,7 +127,9 @@ const ProductLists = () => {
         </ModalContainer>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <ConfirmButton>แก้ไข</ConfirmButton>
-          <CancelButton>ยกเลิก</CancelButton>
+          <CancelButton onClick={() => setIsModalVisibleDel(false)}>
+            ยกเลิก
+          </CancelButton>
         </div>
       </Modal>
     );
@@ -167,7 +169,9 @@ const ProductLists = () => {
         </ModalContainer>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <ConfirmButton>ยืนยัน</ConfirmButton>
-          <CancelButton>ยกเลิก</CancelButton>
+          <CancelButton onClick={() => setIsModalVisibleDel(false)}>
+            ยกเลิก
+          </CancelButton>
         </div>
       </Modal>
     );
@@ -240,26 +244,34 @@ const ProductLists = () => {
 
         <Container>
           <HeaderSection>
-            <AddProduct>
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect y="5" width="12" height="2" rx="1" fill="currentColor" />
-                <rect
-                  x="7"
+            <Link to="/add-product">
+              <AddProduct>
+                <svg
                   width="12"
-                  height="2"
-                  rx="1"
-                  transform="rotate(90 7 0)"
-                  fill="currentColor"
-                />
-              </svg>
-              <p>Add Product</p>
-            </AddProduct>
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="5"
+                    width="12"
+                    height="2"
+                    rx="1"
+                    fill="currentColor"
+                  />
+                  <rect
+                    x="7"
+                    width="12"
+                    height="2"
+                    rx="1"
+                    transform="rotate(90 7 0)"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p>Add Product</p>
+              </AddProduct>
+            </Link>
           </HeaderSection>
           <Table columns={columns} dataSource={data} onChange={onChange} />
         </Container>

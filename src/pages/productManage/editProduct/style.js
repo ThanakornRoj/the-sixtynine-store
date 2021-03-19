@@ -154,7 +154,5 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: absolute;
-  bottom: 32px;
-  right: 32px;
+  margin-top: 71px;
 `;
