@@ -11,10 +11,11 @@ import DayOrder from "./dayOrder";
 import WeekOrder from "./weekOrder";
 import MonthOrder from "./monthOrder";
 
+const { RangePicker } = DatePicker;
+
 const OrderTracking = () => {
   const [renderOrder, setRenderOrder] = useState("all");
   const [renderDatePicker, setRenderDatePicker] = useState(false);
-  const { RangePicker } = DatePicker;
   const dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
   const OnChange = (e) => {
