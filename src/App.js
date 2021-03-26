@@ -79,14 +79,13 @@ const App = () => (
 
         .ant-select-item-option-content {
           font-size: 12px;
-          font-weight: 600;
+          font-weight: 400;
           text-transform: uppercase;
         }
 
         .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
           background-color: #fbc9b7;
         }
-
 
         .ant-checkbox-input:focus {
           border-color: #fd5c28;
@@ -137,6 +136,10 @@ const App = () => (
         .ant-pagination-next:hover .ant-pagination-item-link {
           color: #fd5c28;
           border-color: #fd5c28;
+        }
+
+        .ant-modal-body {
+          padding: 48px;
         }
       `}
     />
