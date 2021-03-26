@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const MainLayoutContainer = styled.div`
   position: relative;
   z-index: 0;
+  min-width: 1280px;
 
   .sub-menu-background {
     background: #02479b;
