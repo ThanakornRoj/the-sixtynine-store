@@ -2,6 +2,15 @@ import styled from "@emotion/styled";
 import { Button } from "antd";
 
 export const Container = styled.div`
+  font-size: 12px;
+
+  .ant-table-tbody {
+    font-size: 12px;
+  }
+
+  .ant-table table {
+    padding: 0 24px;
+  }
   .ant-table-wrapper {
     background: #ffff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
@@ -51,51 +60,15 @@ export const Container = styled.div`
   }
 `;
 
-export const DetailButton = styled(Button)`
+export const EditButton = styled(Button)`
   width: 78px;
   height: 32px;
   border-radius: 3px;
-  border: 1px solid #fd5c28;
-  color: #fd5c28;
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
-  }
-`;
-
-export const DeleteButton = styled(Button)`
-  width: 82px;
-  height: 38px;
-  border-radius: 3px;
-  border: none;
-  background: #fdf0eb;
+  border: 1px solid #333333;
+  color: #333333;
   font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
-  }
-`;
-
-export const CategoryButton = styled(Button)`
-  width: 82px;
-  height: 38px;
-  border-radius: 3px;
-  margin-left: 12px;
-  border: none;
-  background: #fdf0eb;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+  margin-right: 15px;
 
   :hover,
   :focus {
@@ -136,25 +109,7 @@ export const HeaderSection = styled.div`
   margin-top: 24px;
   margin-bottom: 16px;
   display: flex;
-  justify-content: space-between;
-`;
-
-export const Flex = styled.div`
-  display: flex;
-`;
-
-export const LeftContent = styled.div`
-  width: 70%;
-  margin-right: 24px;
-`;
-
-export const RightContent = styled.div`
-  width: 30%;
-  height: 100%;
-  background: #ffffff;
-  box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
-  border-radius: 3px;
-  margin-top: 24px;
+  justify-content: flex-end;
 `;
 
 export const ContentContainer = styled.div`
@@ -162,101 +117,110 @@ export const ContentContainer = styled.div`
   padding-bottom: 22px;
 `;
 
-export const CategoriesBox = styled.div`
-  border-bottom: 1px solid #ededed;
-  padding: 17px 14px;
-  font-size: 14px;
-  font-weight: 500;
+export const CategoryTag = styled.p`
   display: flex;
-  align-items: center;
-
-  p {
-    margin-bottom: 0;
-    cursor: pointer;
-  }
-
-  img {
-    width: 20px;
-    height: auto;
-    margin-right: 10px;
-  }
-
-  p:hover {
-    text-decoration: underline;
-  }
-
-  img:hover {
-    transform: scale(1.1, 1.1);
-  }
-
-  span {
-    color: #fd5c28;
-    margin-left: 5px;
-  }
-`;
-
-export const DeleteCategory = styled(Button)`
-  width: 100%;
-  height: 38px;
-  background: #ededed;
-  color: #999999;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
+  justify-content: center;
+  margin-bottom: 0;
+  background: #fdf0eb;
+  padding: 5px;
+  color: #fd5c28;
   border-radius: 3px;
-  border: none;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
+`;
 
-  :hover,
-  :focus {
-    background: #333333;
-    color: #fff;
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+
+  color: #333333;
+
+  svg {
+    color: #333333;
+  }
+
+  svg:hover,
+  svg:focus {
+    color: #fd5c28;
   }
 `;
 
-export const NewCategory = styled(Button)`
-  margin-top: 8px;
+export const ProductHeader = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+`;
+
+export const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 38px;
-  width: 100%;
-  border: none;
-  background: #fdf0eb;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  text-transform: uppercase;
+  margin: 48px 0;
+`;
 
-  p {
-    margin-left: 10px;
-    margin-bottom: 0;
+export const LeftContent = styled.div`
+  margin-right: 32px;
+`;
+
+export const RightContent = styled.div`
+  font-size: 12px;
+  font-weight: 700;
+
+  .normal {
+    font-weight: 400;
   }
+
+  .tag {
+    display: flex;
+    justify-content: center;
+    background: #fdf0eb;
+    padding: 5px;
+    color: #fd5c28;
+    border-radius: 3px;
+    margin-left: 24px;
+    font-weight: 400;
+  }
+`;
+
+export const ConfirmButton = styled(Button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 38px;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 700;
 
   :hover,
   :focus {
+    background-color: #fd5c28;
     color: #fff;
-    background: #fd5c28;
+    border-color: #fd5c28;
+    transition: 0.5s;
   }
 `;
 
 export const CancelButton = styled(Button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   height: 38px;
-  width: 100%;
   border: none;
-  background: #fdf0eb;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
   border-radius: 3px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  text-transform: uppercase;
+  background-color: #fd5c28;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 24px;
 
   :hover,
   :focus {
+    background-color: #333333;
     color: #fff;
-    background: #fd5c28;
+    transition: 0.5s;
   }
 `;
