@@ -35,6 +35,15 @@ const MainLayout = ({ children }) => {
     location.pathname === "/blog-manage/add-blog"
   ) {
     keyMenu = children?.type?.name ?? "blog";
+  } else if (location.pathname === "/order-tracking") {
+    keyMenu = children?.type?.name ?? "orderTracking";
+  } else if (
+    location.pathname === "/product-lists" ||
+    location.pathname === "/product-lists/edit-product"
+  ) {
+    keyMenu = children?.type?.name ?? "productLists";
+  } else if (location.pathname === "/add-product") {
+    keyMenu = children?.type?.name ?? "addProduct";
   }
 
   if (
@@ -51,6 +60,17 @@ const MainLayout = ({ children }) => {
     location.pathname === "/blog-manage/add-blog"
   ) {
     subKeyMenu = children?.type?.name ?? "Edit";
+  }
+
+  if (location.pathname === "/order-tracking") {
+    subKeyMenu = children?.type?.name ?? "order";
+
+  if (
+    location.pathname === "/product-lists" ||
+    location.pathname === "/product-lists/edit-product" ||
+    location.pathname === "/add-product"
+  ) {
+    subKeyMenu = children?.type?.name ?? "manageProduct";
   }
 
   return (
@@ -73,7 +93,14 @@ const MainLayout = ({ children }) => {
               dashboard
             </Menu.Item>
 
-            <Menu.Item key="2">order</Menu.Item>
+            <SubMenu key="order" title="Order">
+              <Menu.Item key="orderTracking">
+                <Link to="/order-tracking" />
+                Order
+              </Menu.Item>
+              <Menu.Item key="orderManage">Order Management</Menu.Item>
+              <Menu.Item key="report">Report</Menu.Item>
+            </SubMenu>
 
             <SubMenu key="Edit" title="edit page">
               <Menu.Item key="pageLists">
@@ -92,7 +119,10 @@ const MainLayout = ({ children }) => {
                 <Link to="/product-lists" />
                 product lists
               </Menu.Item>
-              <Menu.Item key="addProduct">add product</Menu.Item>
+              <Menu.Item key="addProduct">
+                <Link to="/add-product" />
+                add product
+              </Menu.Item>
               <Menu.Item key="categories">Categories</Menu.Item>
             </SubMenu>
 
