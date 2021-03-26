@@ -1,5 +1,6 @@
 import React from "react";
 import { Input, Select } from "antd";
+import { useLocation } from "react-router-dom";
 
 import {
   Container,
@@ -24,11 +25,13 @@ import Uploader from "../../../components/uploader";
 const { TextArea } = Input;
 const { Option } = Select;
 
-function handleChange(value) {
+const handleChange = (value) => {
   console.log(`selected ${value}`);
-}
+};
 
-const AddProduct = () => {
+const ManageProduct = () => {
+  const location = useLocation();
+
   const Group = [
     {
       value: "new",
@@ -78,10 +81,15 @@ const AddProduct = () => {
       category: "อุปกรณ์เสริม",
     },
   ];
+
   return (
     <MainLayout>
       <Container>
-        <Header text="ADD PRODUCT" />
+        {location.pathname === "/add-product" ? (
+          <Header text="ADD PRODUCT" />
+        ) : (
+          <Header text="Edit Product" />
+        )}
         <ContentContainer>
           <Content>
             <div className="form-row">
@@ -147,4 +155,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default ManageProduct;

@@ -20,7 +20,6 @@ const MainLayout = ({ children }) => {
   let keyMenu = children?.type?.name ?? "dashboard";
   let subKeyMenu = children?.type?.name ?? "";
   const location = useLocation();
-  console.log(location.pathname);
 
   if (location.pathname === "/manage-user") {
     keyMenu = children?.type?.name ?? "memberLists";
@@ -30,7 +29,7 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "memberAdmin";
   } else if (
     location.pathname === "/product-lists" ||
-    location.pathname === "/edit-product"
+    location.pathname === "/product-lists/edit-product"
   ) {
     keyMenu = children?.type?.name ?? "productLists";
   } else if (location.pathname === "/add-product") {
@@ -47,7 +46,7 @@ const MainLayout = ({ children }) => {
 
   if (
     location.pathname === "/product-lists" ||
-    location.pathname === "/edit-product" ||
+    location.pathname === "/product-lists/edit-product" ||
     location.pathname === "/add-product"
   ) {
     subKeyMenu = children?.type?.name ?? "manageProduct";

@@ -180,7 +180,7 @@ const ProductLists = () => {
   const renderButton = () => {
     return (
       <ButtonContainer>
-        <Link to="/edit-product">
+        <Link to="/product-lists/edit-product">
           <EditButton>Edit</EditButton>
         </Link>
         <div
