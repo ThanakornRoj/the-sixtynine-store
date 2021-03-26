@@ -27,6 +27,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "memberAction";
   } else if (location.pathname === "/manage-admin") {
     keyMenu = children?.type?.name ?? "memberAdmin";
+  } else if (location.pathname === "/order-tracking") {
+    keyMenu = children?.type?.name ?? "orderTracking";
   } else if (
     location.pathname === "/product-lists" ||
     location.pathname === "/product-lists/edit-product"
@@ -43,6 +45,9 @@ const MainLayout = ({ children }) => {
   ) {
     subKeyMenu = children?.type?.name ?? "memberManage";
   }
+
+  if (location.pathname === "/order-tracking") {
+    subKeyMenu = children?.type?.name ?? "order";
 
   if (
     location.pathname === "/product-lists" ||
@@ -72,12 +77,19 @@ const MainLayout = ({ children }) => {
               dashboard
             </Menu.Item>
 
-            <Menu.Item key="2">order</Menu.Item>
+            <SubMenu key="order" title="Order">
+              <Menu.Item key="orderTracking">
+                <Link to="/order-tracking" />
+                Order
+              </Menu.Item>
+              <Menu.Item key="orderManage">Order Management</Menu.Item>
+              <Menu.Item key="report">Report</Menu.Item>
+            </SubMenu>
 
             <SubMenu key="sub1" title="edit page">
-              <Menu.Item key="3">Tom</Menu.Item>
-              <Menu.Item key="4">Bill</Menu.Item>
-              <Menu.Item key="5">Alex</Menu.Item>
+              <Menu.Item key="1">Order</Menu.Item>
+              <Menu.Item key="2">Order Management</Menu.Item>
+              <Menu.Item key="3">Report</Menu.Item>
             </SubMenu>
 
             <SubMenu key="manageProduct" title="product">
