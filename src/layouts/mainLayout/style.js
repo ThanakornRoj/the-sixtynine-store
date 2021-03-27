@@ -4,6 +4,7 @@ export const MainLayoutContainer = styled.div`
   position: relative;
   min-width: 1280px;
   z-index: 0;
+  min-width: 1280px;
 
   .sub-menu-background {
     background: #02479b;

@@ -27,6 +27,14 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "memberAction";
   } else if (location.pathname === "/manage-admin") {
     keyMenu = children?.type?.name ?? "memberAdmin";
+  } else if (location.pathname === "/edit-page") {
+    keyMenu = children?.type?.name ?? "pageLists";
+  } else if (
+    location.pathname === "/blog-manage" ||
+    location.pathname === "/blog-manage/edit-blog" ||
+    location.pathname === "/blog-manage/add-blog"
+  ) {
+    keyMenu = children?.type?.name ?? "blog";
   } else if (location.pathname === "/order-tracking") {
     keyMenu = children?.type?.name ?? "orderTracking";
   } else if (
@@ -44,6 +52,14 @@ const MainLayout = ({ children }) => {
     location.pathname === "/manage-admin"
   ) {
     subKeyMenu = children?.type?.name ?? "memberManage";
+  }
+  if (
+    location.pathname === "/edit-page" ||
+    location.pathname === "/blog-manage" ||
+    location.pathname === "/blog-manage/edit-blog" ||
+    location.pathname === "/blog-manage/add-blog"
+  ) {
+    subKeyMenu = children?.type?.name ?? "Edit";
   }
 
   if (location.pathname === "/order-tracking") {
@@ -86,10 +102,16 @@ const MainLayout = ({ children }) => {
               <Menu.Item key="report">Report</Menu.Item>
             </SubMenu>
 
-            <SubMenu key="sub1" title="edit page">
-              <Menu.Item key="1">Order</Menu.Item>
-              <Menu.Item key="2">Order Management</Menu.Item>
-              <Menu.Item key="3">Report</Menu.Item>
+            <SubMenu key="Edit" title="edit page">
+              <Menu.Item key="pageLists">
+                <Link to="/edit-page" />
+                page list
+              </Menu.Item>
+              <Menu.Item key="blog">
+                <Link to="/blog-manage" />
+                Blog
+              </Menu.Item>
+              <Menu.Item key="banner">Banner</Menu.Item>
             </SubMenu>
 
             <SubMenu key="manageProduct" title="product">
