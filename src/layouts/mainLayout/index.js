@@ -64,7 +64,7 @@ const MainLayout = ({ children }) => {
 
   if (location.pathname === "/order-tracking") {
     subKeyMenu = children?.type?.name ?? "order";
-
+  }
   if (
     location.pathname === "/product-lists" ||
     location.pathname === "/product-lists/edit-product" ||
@@ -176,5 +176,4 @@ const MainLayout = ({ children }) => {
     </MainLayoutContainer>
   );
 };
-
 export default MainLayout;
