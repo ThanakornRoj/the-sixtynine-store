@@ -58,7 +58,7 @@ export const ViewButton = styled(Button)`
   width: 78px;
   height: 32px;
   border-radius: 3px;
-  border: 2px solid #333333;
+  border: 1px solid #333333;
   color: #333333;
   font-size: 12px;
   font-weight: 700;

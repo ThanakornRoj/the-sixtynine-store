@@ -13,6 +13,7 @@ export const Container = styled.div`
   .ant-table-thead > tr > th {
     font-weight: 600;
     background: #ffff;
+    border-bottom: none;
   }
 
   table tr th.ant-table-selection-column,

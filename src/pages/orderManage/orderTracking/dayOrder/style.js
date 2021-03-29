@@ -7,6 +7,7 @@ export const DetailButton = styled(Button)`
   border-radius: 3px;
   border: 1.5px solid #333333;
   color: #333333;
+  font-weight: 600;
 
   :hover,
   :focus {
