@@ -122,7 +122,7 @@ const SaleLists = () => {
         )}
         {current === "bestSelling" ? (
           <p className="second-menu" style={{ color: "#333333" }}>
-            Best selling products{" "}
+            Best selling products
           </p>
         ) : (
           <p className="second-menu" onClick={() => setCurrent("bestSelling")}>

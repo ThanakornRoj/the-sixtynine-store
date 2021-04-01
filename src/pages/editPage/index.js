@@ -11,6 +11,7 @@ import {
 
 import MainLayout from "../../layouts/mainLayout";
 import Header from "../../components/header";
+import { render } from "react-dom";
 
 const EditPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -53,6 +54,14 @@ const EditPage = () => {
     );
   };
 
+  const renderCategoryName = (e) => {
+    return (
+      <span style={{ paddingLeft: "15px", textTransform: "uppercase" }}>
+        {e}
+      </span>
+    );
+  };
+
   const renderConfirmModal = () => {
     return (
       <StyleModal
@@ -88,37 +97,37 @@ const EditPage = () => {
   const data = [
     {
       key: 1,
-      page: <span style={{ paddingLeft: "15px" }}>HOME PAGE</span>,
+      page: renderCategoryName("HomePage"),
       action: renderButton(),
     },
     {
       key: 2,
-      page: <span style={{ paddingLeft: "15px" }}>PRODUCT LIST</span>,
+      page: renderCategoryName("product list"),
       action: renderButton(),
     },
     {
       key: 3,
-      page: <span style={{ paddingLeft: "15px" }}>PRODUCT</span>,
+      page: renderCategoryName("product"),
       action: renderButton(),
     },
     {
       key: 4,
-      page: <span style={{ paddingLeft: "15px" }}>ACCOUNT</span>,
+      page: renderCategoryName("account"),
       action: renderButton(),
     },
     {
       key: 5,
-      page: <span style={{ paddingLeft: "15px" }}>BLOG</span>,
+      page: renderCategoryName("blog"),
       action: renderButton(),
     },
     {
       key: 6,
-      page: <span style={{ paddingLeft: "15px" }}>CONTACT</span>,
+      page: renderCategoryName("contact"),
       action: renderButton(),
     },
     {
       key: 7,
-      page: <span style={{ paddingLeft: "15px" }}>PAYMENT</span>,
+      page: renderCategoryName("payment"),
       action: renderButton(),
     },
   ];
