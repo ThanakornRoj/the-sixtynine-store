@@ -70,29 +70,6 @@ const ProductLists = () => {
     },
   ];
 
-  const Stock = [
-    {
-      category: "เครื่องเซิฟเวอร์",
-      stock: 21,
-    },
-    {
-      category: "เครื่องกระจายสัญญาณ",
-      stock: 32,
-    },
-    {
-      category: "จอมอนิเตอร์",
-      stock: 105,
-    },
-    {
-      category: "CPU",
-      stock: 45,
-    },
-    {
-      category: "อุปกรณ์เสริม",
-      stock: 26,
-    },
-  ];
-
   const renderModalInfo = () => {
     return (
       <Modal
@@ -226,7 +203,7 @@ const ProductLists = () => {
   for (let i = 0; i < 50; i++) {
     data.push({
       key: i,
-      id: `UA${33567 + i}`,
+      id: <span style={{ paddingLeft: "15px" }}>UA{33567 + i}</span>,
       name: `สินค้าที่ ${i}`,
       category: (
         <Tag color="#fdf0eb" style={{ color: "#fd5c28", borderRadius: "5px" }}>

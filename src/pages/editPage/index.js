@@ -88,37 +88,37 @@ const EditPage = () => {
   const data = [
     {
       key: 1,
-      page: "HOME PAGE",
+      page: <span style={{ paddingLeft: "15px" }}>HOME PAGE</span>,
       action: renderButton(),
     },
     {
       key: 2,
-      page: "PRODUCT LIST",
+      page: <span style={{ paddingLeft: "15px" }}>PRODUCT LIST</span>,
       action: renderButton(),
     },
     {
       key: 3,
-      page: "PRODUCT",
+      page: <span style={{ paddingLeft: "15px" }}>PRODUCT</span>,
       action: renderButton(),
     },
     {
       key: 4,
-      page: " ACCOUNT",
+      page: <span style={{ paddingLeft: "15px" }}>ACCOUNT</span>,
       action: renderButton(),
     },
     {
       key: 5,
-      page: "BLOG",
+      page: <span style={{ paddingLeft: "15px" }}>BLOG</span>,
       action: renderButton(),
     },
     {
       key: 6,
-      page: "CONTACT",
+      page: <span style={{ paddingLeft: "15px" }}>CONTACT</span>,
       action: renderButton(),
     },
     {
       key: 7,
-      page: "PAYMENT",
+      page: <span style={{ paddingLeft: "15px" }}>PAYMENT</span>,
       action: renderButton(),
     },
   ];

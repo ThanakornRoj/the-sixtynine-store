@@ -11,6 +11,7 @@ export const Container = styled.div`
   .ant-table table {
     padding: 0 24px;
   }
+
   .ant-table-wrapper {
     background: #ffff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
@@ -18,6 +19,12 @@ export const Container = styled.div`
   .ant-table-thead > tr > th {
     font-weight: 600;
     background: #ffff;
+    border-bottom: none;
+    padding-left: 32px;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding-left: 32px;
   }
 
   table tr th.ant-table-selection-column,
