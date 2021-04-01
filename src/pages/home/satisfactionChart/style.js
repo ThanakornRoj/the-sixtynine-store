@@ -23,6 +23,7 @@ export const ChartContainer = styled.div`
 
   .recharts-responsive-container {
     height: 76% !important;
+    width: 98% !important;
   }
 `;
 
