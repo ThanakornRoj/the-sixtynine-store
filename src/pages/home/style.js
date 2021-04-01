@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   position: relative;
-  height: 600px;
 `;
 
 export const HeaderSection = styled.div`

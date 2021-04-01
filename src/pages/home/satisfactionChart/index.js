@@ -25,7 +25,7 @@ const SatisfactionChart = () => {
   ];
   return (
     <ChartBox>
-      <BoxHeader text="Satisfaction" />
+      <BoxHeader text="Sales summary " />
       <ChartContainer>
         <OverAll>Overall Satisfaction (Maximum: 10 Points)</OverAll>
         <ResponsiveContainer>
