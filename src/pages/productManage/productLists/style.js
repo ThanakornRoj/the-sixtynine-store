@@ -8,10 +8,6 @@ export const Container = styled.div`
     font-size: 12px;
   }
 
-  .ant-table table {
-    padding: 0 24px;
-  }
-
   .ant-table-wrapper {
     background: #ffff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
