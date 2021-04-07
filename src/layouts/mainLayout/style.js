@@ -9,6 +9,7 @@ export const MainLayoutContainer = styled.div`
   .sub-menu-background {
     background: #02479b;
   }
+
   .ant-layout-header {
     background: #fff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
