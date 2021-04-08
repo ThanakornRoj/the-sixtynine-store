@@ -100,6 +100,19 @@ export const MainLayoutContainer = styled.div`
   .last-menu {
     border: 1px solid #2973ca;
   }
+
+  @media (max-height: 841px) {
+    .log-out {
+      bottom: 20px;
+    }
+  }
+
+  @media (max-height: 725px) {
+    .log-out {
+      border-top: none;
+      position: static;
+    }
+  }
 `;
 
 export const CompanyBanner = styled.div`
