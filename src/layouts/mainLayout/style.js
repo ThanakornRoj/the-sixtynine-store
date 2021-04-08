@@ -9,6 +9,7 @@ export const MainLayoutContainer = styled.div`
   .sub-menu-background {
     background: #02479b;
   }
+
   .ant-layout-header {
     background: #fff;
     box-shadow: 0px 0px 29px -15px rgba(0, 0, 0, 0.75);
@@ -30,7 +31,7 @@ export const MainLayoutContainer = styled.div`
     z-index: 2;
     top: 0;
     left: 0;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .ant-layout-content {
@@ -107,10 +108,26 @@ export const MainLayoutContainer = styled.div`
     }
   }
 
-  @media (max-height: 725px) {
+  @media (max-height: 700px) {
     .log-out {
-      border-top: none;
       position: static;
+      border-top: none;
+    }
+  }
+
+  @media (max-height: 535px) {
+    .ant-layout-sider {
+      overflow-y: scroll;
+    }
+
+    .ant-layout-sider-children {
+      min-height: 205vh;
+    }
+  }
+
+  @media (max-height: 300px) {
+    .ant-layout-sider-children {
+      min-height: 280vh;
     }
   }
 `;

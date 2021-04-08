@@ -9,7 +9,7 @@ import {
 } from "./style";
 
 const SaleLists = () => {
-  const [current, setCurrent] = useState("mostView");
+  const [current, setCurrent] = useState(true);
 
   const productData = [
     {
@@ -115,20 +115,19 @@ const SaleLists = () => {
   return (
     <ProductContainer>
       <Menu>
-        {current === "mostView" ? (
-          <p style={{ color: "#333333" }}>Most viewed products </p>
-        ) : (
-          <p onClick={() => setCurrent("mostView")}>Most viewed products </p>
-        )}
-        {current === "bestSelling" ? (
-          <p className="second-menu" style={{ color: "#333333" }}>
-            Best selling products
-          </p>
-        ) : (
-          <p className="second-menu" onClick={() => setCurrent("bestSelling")}>
-            Best selling products{" "}
-          </p>
-        )}
+        <p
+          style={{ color: current ? "#333333" : null }}
+          onClick={() => setCurrent(true)}
+        >
+          Most viewed products
+        </p>
+        <p
+          className="second-menu"
+          style={{ color: current ? null : "#333333" }}
+          onClick={() => setCurrent(false)}
+        >
+          Best selling products
+        </p>
       </Menu>
       <ScrollContainer>
         {productData.map((data, index) => (

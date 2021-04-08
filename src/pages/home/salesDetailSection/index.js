@@ -4,18 +4,13 @@ import {
   ContentContainer,
   Flex,
   LeftContent,
-  ProductBox,
-  ProductContainer,
   ProductListSection,
   RightContent,
   SalesBox,
   SalesSection,
-  ScrollContainer,
   ShowAllProduct,
-  ViewButton,
 } from "./style";
 
-import BoxHeader from "../../../components/boxHeader";
 import GoodSaleChart from "../goodSaleChart";
 import SatisfactionChart from "../satisfactionChart";
 import SaleLists from "../productSaleLists";

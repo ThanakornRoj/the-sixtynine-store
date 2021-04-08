@@ -24,7 +24,7 @@ const GoodSaleChart = () => {
   ];
   return (
     <ChartBox>
-      <BoxHeader text="Sales per month " />
+      <BoxHeader text="Sales per month" />
       <ChartContainer>
         <ResponsiveContainer>
           <BarChart

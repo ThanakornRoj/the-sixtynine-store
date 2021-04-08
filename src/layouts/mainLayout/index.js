@@ -76,7 +76,7 @@ const MainLayout = ({ children }) => {
   return (
     <MainLayoutContainer>
       <Layout style={{ minHeight: "100vh" }}>
-        <Sider width={250} style={{ overflowY: "hidden" }}>
+        <Sider width={250}>
           <CompanyBanner>
             <img src={Logo} alt="" />
             <CompanyName>sixtynine store</CompanyName>
