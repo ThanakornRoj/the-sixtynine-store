@@ -22,7 +22,6 @@ const ShippedTable = () => {
     {
       title: "Name",
       dataIndex: "name",
-
       width: "20%",
     },
     {

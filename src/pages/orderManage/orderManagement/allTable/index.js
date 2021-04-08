@@ -22,7 +22,6 @@ const AllTable = () => {
     {
       title: "Name",
       dataIndex: "name",
-
       width: "20%",
     },
     {

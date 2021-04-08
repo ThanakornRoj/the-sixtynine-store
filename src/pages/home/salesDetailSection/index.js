@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Flex,
@@ -12,82 +12,80 @@ import {
   ScrollContainer,
   ShowAllProduct,
   ViewButton,
-} from './style';
+} from "./style";
 
-import BoxHeader from '../../../components/boxHeader';
-import GoodSaleChart from '../goodSaleChart';
-import UsageChart from '../usageChart';
-import SatisfactionChart from '../satisfactionChart';
-import ProgressChart from '../progressChart';
+import BoxHeader from "../../../components/boxHeader";
+import GoodSaleChart from "../goodSaleChart";
+import SatisfactionChart from "../satisfactionChart";
 
 const SaleDetail = () => {
   const salesData = [
     {
-      text: 'products',
+      text: "products",
       number: 1000,
     },
     {
-      text: 'sales',
+      text: "sales",
       number: 3000,
     },
     {
-      text: 'cost',
+      text: "cost",
       number: 4000,
     },
     {
-      text: 'text',
+      text: "text",
       number: 5000,
     },
   ];
 
   const productData = [
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odiWVR.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odiWVR.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odgM58.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odgM58.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odi0Y0.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odi0Y0.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odi7iu.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odi7iu.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odi7iu.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odi7iu.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odiWVR.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odiWVR.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odgM58.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odgM58.png",
     },
     {
-      name: 'Monitor Samsung LC27',
-      description: 'simply dummy text.',
+      name: "Monitor Samsung LC27",
+      description: "simply dummy text.",
       price: 1000,
-      image: 'https://sv1.picz.in.th/images/2021/02/02/odi7iu.png',
+      image: "https://sv1.picz.in.th/images/2021/02/02/odi7iu.png",
     },
   ];
 
@@ -99,7 +97,7 @@ const SaleDetail = () => {
             {salesData.map((data) => (
               <SalesBox>
                 <p className="number-data">
-                  ${data.number.toLocaleString('en-IN')}
+                  ${data.number.toLocaleString("en-IN")}
                 </p>
                 <p>{data.text}</p>
               </SalesBox>
@@ -120,7 +118,7 @@ const SaleDetail = () => {
                         <p className="description">{data.description}</p>
                       </div>
                       <div className="price">
-                        <p>${data.price.toLocaleString('en-IN')}</p>
+                        <p>${data.price.toLocaleString("en-IN")}</p>
                         <p className="price-text">Price</p>
                       </div>
                     </div>
@@ -140,10 +138,10 @@ const SaleDetail = () => {
         </RightContent>
       </Flex>
       <Flex>
-        <LeftContent style={{ width: '30%' }}>
+        <LeftContent style={{ width: "30%" }}>
           <SatisfactionChart />
         </LeftContent>
-        <RightContent style={{ width: '70%' }}>
+        <RightContent style={{ width: "70%" }}>
           <ProgressChart />
         </RightContent>
       </Flex>

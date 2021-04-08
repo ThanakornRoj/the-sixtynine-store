@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Tag } from "antd";
+import { Table } from "antd";
 
 import { Container, ViewButton } from "./style";
 
@@ -22,7 +22,6 @@ const CancelTable = () => {
     {
       title: "Name",
       dataIndex: "name",
-
       width: "20%",
     },
     {

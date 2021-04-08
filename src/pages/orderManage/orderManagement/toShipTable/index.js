@@ -22,7 +22,6 @@ const ToShipTable = () => {
     {
       title: "Name",
       dataIndex: "name",
-
       width: "20%",
     },
     {

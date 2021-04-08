@@ -44,6 +44,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "productLists";
   } else if (location.pathname === "/add-product") {
     keyMenu = children?.type?.name ?? "addProduct";
+  } else if (location.pathname === "/order-management") {
+    keyMenu = children?.type?.name ?? "orderManagement";
   }
 
   if (
@@ -62,7 +64,10 @@ const MainLayout = ({ children }) => {
     subKeyMenu = children?.type?.name ?? "Edit";
   }
 
-  if (location.pathname === "/order-tracking") {
+  if (
+    location.pathname === "/order-tracking" ||
+    location.pathname === "/order-management"
+  ) {
     subKeyMenu = children?.type?.name ?? "order";
   }
   if (
@@ -98,7 +103,10 @@ const MainLayout = ({ children }) => {
                 <Link to="/order-tracking" />
                 Order
               </Menu.Item>
-              <Menu.Item key="orderManage">Order Management</Menu.Item>
+              <Menu.Item key="orderManagement">
+                <Link to="/order-management" />
+                Order Management
+              </Menu.Item>
               <Menu.Item key="report">Report</Menu.Item>
             </SubMenu>
 
