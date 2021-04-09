@@ -49,6 +49,10 @@ export const Container = styled.div`
     background: #fead93;
   }
 
+  .ant-table-thead > tr > th {
+    text-transform: uppercase;
+  }
+
   svg:hover {
     color: #fd5c28;
     transform: scale(1.05, 1.05);

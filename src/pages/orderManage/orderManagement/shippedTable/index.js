@@ -42,7 +42,7 @@ const ShippedTable = () => {
 
   const renderTime = () => {
     return (
-      <div>
+      <div style={{ paddingLeft: "15px" }}>
         <span>2021-02-28 </span>
         <span style={{ marginLeft: "25px" }}>12.08</span>
       </div>
