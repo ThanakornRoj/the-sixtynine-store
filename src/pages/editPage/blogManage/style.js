@@ -5,11 +5,17 @@ export const Container = styled.div`
   .ant-table-wrapper {
     background: #ffff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
-    padding: 0 24px;
   }
+
   .ant-table-thead > tr > th {
     font-weight: 600;
     background: #ffff;
+    border-bottom: none;
+    padding-left: 32px;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding-left: 32px;
   }
 
   table tr th.ant-table-selection-column,
@@ -92,7 +98,7 @@ export const ViewButton = styled(Button)`
   width: 78px;
   height: 32px;
   border-radius: 3px;
-  border: 2px solid #333333;
+  border: 1px solid #333333;
   color: #333333;
   font-size: 12px;
   font-weight: 700;

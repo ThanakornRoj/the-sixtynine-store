@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   .ant-table {
-    padding: 0 32px;
     min-height: 69vh;
   }
 
@@ -13,6 +12,12 @@ export const Container = styled.div`
   .ant-table-thead > tr > th {
     font-weight: 600;
     background: #ffff;
+    border-bottom: none;
+    padding-left: 32px;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding-left: 32px;
   }
 
   table tr th.ant-table-selection-column,
