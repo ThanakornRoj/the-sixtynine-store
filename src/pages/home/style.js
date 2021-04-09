@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   position: relative;
-  height: 600px;
 `;
 
 export const HeaderSection = styled.div`
@@ -64,6 +63,7 @@ export const HeaderSection = styled.div`
 export const ButtonFilter = styled.div`
   display: flex;
   justify-content: space-around;
+  z-index: 0;
 `;
 
 export const ContentContainer = styled.div``;

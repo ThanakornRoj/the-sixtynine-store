@@ -11,6 +11,7 @@ import {
 
 import MainLayout from "../../layouts/mainLayout";
 import Header from "../../components/header";
+import { render } from "react-dom";
 
 const EditPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -53,6 +54,14 @@ const EditPage = () => {
     );
   };
 
+  const renderCategoryName = (e) => {
+    return (
+      <span style={{ paddingLeft: "15px", textTransform: "uppercase" }}>
+        {e}
+      </span>
+    );
+  };
+
   const renderConfirmModal = () => {
     return (
       <StyleModal
@@ -88,37 +97,37 @@ const EditPage = () => {
   const data = [
     {
       key: 1,
-      page: "HOME PAGE",
+      page: renderCategoryName("HomePage"),
       action: renderButton(),
     },
     {
       key: 2,
-      page: "PRODUCT LIST",
+      page: renderCategoryName("product list"),
       action: renderButton(),
     },
     {
       key: 3,
-      page: "PRODUCT",
+      page: renderCategoryName("product"),
       action: renderButton(),
     },
     {
       key: 4,
-      page: " ACCOUNT",
+      page: renderCategoryName("account"),
       action: renderButton(),
     },
     {
       key: 5,
-      page: "BLOG",
+      page: renderCategoryName("blog"),
       action: renderButton(),
     },
     {
       key: 6,
-      page: "CONTACT",
+      page: renderCategoryName("contact"),
       action: renderButton(),
     },
     {
       key: 7,
-      page: "PAYMENT",
+      page: renderCategoryName("payment"),
       action: renderButton(),
     },
   ];

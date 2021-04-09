@@ -170,7 +170,7 @@ const MainLayout = ({ children }) => {
               </Badge>
             </HeaderContent>
           </Header>
-          <Content style={{ margin: "24px 32px" }}>{children}</Content>
+          <Content>{children}</Content>
         </Layout>
       </Layout>
     </MainLayoutContainer>

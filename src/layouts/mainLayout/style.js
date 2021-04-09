@@ -9,9 +9,15 @@ export const MainLayoutContainer = styled.div`
   .sub-menu-background {
     background: #02479b;
   }
+
   .ant-layout-header {
     background: #fff;
-    box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 29px -15px rgba(0, 0, 0, 0.75);
+    width: 87%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
   }
 
   .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal)
@@ -19,8 +25,26 @@ export const MainLayoutContainer = styled.div`
     background-color: #02479b;
   }
 
+  .ant-layout-sider {
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+  }
+
+  .ant-layout-content {
+    margin: 24px 32px;
+    margin-top: 88px;
+  }
+
   .ant-layout-sider-children {
     background: #035cc6;
+  }
+
+  .ant-layout.ant-layout-has-sider > .ant-layout {
+    margin-left: 250px;
   }
 
   .ant-menu.ant-menu-dark,
@@ -76,6 +100,35 @@ export const MainLayoutContainer = styled.div`
 
   .last-menu {
     border: 1px solid #2973ca;
+  }
+
+  @media (max-height: 841px) {
+    .log-out {
+      bottom: 20px;
+    }
+  }
+
+  @media (max-height: 700px) {
+    .log-out {
+      position: static;
+      border-top: none;
+    }
+  }
+
+  @media (max-height: 535px) {
+    .ant-layout-sider {
+      overflow-y: scroll;
+    }
+
+    .ant-layout-sider-children {
+      min-height: 205vh;
+    }
+  }
+
+  @media (max-height: 300px) {
+    .ant-layout-sider-children {
+      min-height: 280vh;
+    }
   }
 `;
 

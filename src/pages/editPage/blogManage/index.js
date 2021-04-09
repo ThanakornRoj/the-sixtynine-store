@@ -51,7 +51,7 @@ const BlogManage = () => {
 
   const renderDate = () => {
     return (
-      <div>
+      <div style={{ paddingLeft: "15px" }}>
         <span style={{ marginRight: "24px" }}>21-02-28</span>
         <span>12:00:59</span>
       </div>

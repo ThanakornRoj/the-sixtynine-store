@@ -8,7 +8,8 @@ export const ChartBox = styled.div`
 `;
 
 export const ChartContainer = styled.div`
-  height: 185px;
+  height: 100%;
+  max-height: 350px;
   padding-bottom: 5px;
 
   .recharts-default-legend {
@@ -22,6 +23,7 @@ export const ChartContainer = styled.div`
 
   .recharts-responsive-container {
     height: 76% !important;
+    width: 98% !important;
   }
 `;
 
