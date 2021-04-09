@@ -102,32 +102,59 @@ export const MainLayoutContainer = styled.div`
     border: 1px solid #2973ca;
   }
 
-  @media (max-height: 841px) {
+  @media (max-height: 950px) {
     .log-out {
       bottom: 20px;
     }
   }
 
-  @media (max-height: 700px) {
-    .log-out {
-      position: static;
-      border-top: none;
-    }
-  }
-
-  @media (max-height: 535px) {
+  @media (max-height: 730px) {
     .ant-layout-sider {
       overflow-y: scroll;
+
+      ::-webkit-scrollbar {
+        width: 5px;
+        background-color: #c4c4c4;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background-color: #999999;
+      }
     }
 
     .ant-layout-sider-children {
-      min-height: 205vh;
+      min-height: 120vh;
     }
   }
 
-  @media (max-height: 300px) {
+  @media (max-height: 600px) {
     .ant-layout-sider-children {
-      min-height: 280vh;
+      min-height: 140vh;
+    }
+  }
+
+  @media (max-height: 510px) {
+    .ant-layout-sider-children {
+      min-height: 160vh;
+    }
+  }
+
+  @media (max-height: 450px) {
+    .ant-layout-sider-children {
+      min-height: 180vh;
+    }
+  }
+
+  @media (max-height: 400px) {
+    .ant-layout-sider-children {
+      min-height: 210vh;
+    }
+  }
+
+  @media (max-height: 355px) {
+    .ant-layout-sider-children {
+      min-height: 240vh;
     }
   }
 `;

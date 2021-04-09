@@ -78,6 +78,18 @@ const MainLayout = ({ children }) => {
     subKeyMenu = children?.type?.name ?? "manageProduct";
   }
 
+  const [openKeys, setOpenKeys] = useState([subKeyMenu]);
+  const rootSubmenuKeys = ["order", "Edit", "manageProduct", "memberManage"];
+
+  const onOpenChange = (keys) => {
+    const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
+    if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
+      setOpenKeys(keys);
+    } else {
+      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
+    }
+  };
+
   return (
     <MainLayoutContainer>
       <Layout style={{ minHeight: "100vh" }}>
@@ -91,6 +103,8 @@ const MainLayout = ({ children }) => {
             theme="dark"
             defaultSelectedKeys={[keyMenu]}
             defaultOpenKeys={[subKeyMenu]}
+            openKeys={openKeys}
+            onOpenChange={onOpenChange}
             mode="inline"
           >
             <Menu.Item key="dashboard">
