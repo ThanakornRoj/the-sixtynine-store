@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Input } from "antd";
 
 export const Text = styled.p`
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -13,7 +13,7 @@ export const FormContainer = styled.div`
   padding: 10px 15px;
 
   .header {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #999999;
     margin-bottom: 0;

@@ -37,7 +37,7 @@ export const UploadSection = styled.div`
 
   .right-contain {
     .text {
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 600;
       color: #999999;
       margin-left: 15px;
@@ -46,7 +46,7 @@ export const UploadSection = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -57,7 +57,7 @@ export const FormContainer = styled.div`
   padding: 10px 15px;
 
   .header {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #999999;
     margin-bottom: 0;

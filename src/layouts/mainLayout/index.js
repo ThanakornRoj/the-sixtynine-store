@@ -23,7 +23,10 @@ const MainLayout = ({ children }) => {
 
   if (location.pathname === "/member-activity") {
     keyMenu = children?.type?.name ?? "memberActivity";
-  } else if (location.pathname === "/manage-user") {
+  } else if (
+    location.pathname === "/manage-user" ||
+    location.pathname === "/user-info"
+  ) {
     keyMenu = children?.type?.name ?? "manageUser";
   } else if (location.pathname === "/manage-admin") {
     keyMenu = children?.type?.name ?? "memberAdmin";
@@ -49,7 +52,8 @@ const MainLayout = ({ children }) => {
   if (
     location.pathname === "/member-activity" ||
     location.pathname === "/manage-user" ||
-    location.pathname === "/manage-admin"
+    location.pathname === "/manage-admin" ||
+    location.pathname === "/user-info"
   ) {
     subKeyMenu = children?.type?.name ?? "memberManage";
   }

@@ -88,7 +88,7 @@ const ProfileForm = () => {
               ))}
         </GridContainer>
       </FormContainer>
-      <FormContainer style={{ borderBottom: "none" }}>
+      <FormContainer style={{ borderBottom: "none", marginBottom: "110px" }}>
         <p className="header">Contact</p>
         <GridContainer>
           {contact.map((input) => (

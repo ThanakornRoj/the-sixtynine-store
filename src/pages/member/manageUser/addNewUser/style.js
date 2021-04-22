@@ -16,7 +16,6 @@ export const Container = styled.div`
   .button-contain {
     display: flex;
     justify-content: flex-end;
-    margin-top: 113px;
   }
 
   .ant-select:not(.ant-select-customize-input) .ant-select-selector {

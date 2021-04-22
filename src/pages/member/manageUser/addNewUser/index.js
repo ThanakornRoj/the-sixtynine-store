@@ -7,9 +7,10 @@ import Header from "../../../../components/header";
 
 import ProfileForm from "./profileForm";
 import AddressForm from "./addressForm";
+import PaymentForm from "./paymentForm";
 
 const AddNewUser = () => {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(3);
 
   const handleChange = () => {
     if (current >= 3) setCurrent(1);
@@ -22,6 +23,8 @@ const AddNewUser = () => {
         return <ProfileForm />;
       case 2:
         return <AddressForm />;
+      case 3:
+        return <PaymentForm />;
       default:
         return <ProfileForm />;
     }
