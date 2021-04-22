@@ -4,6 +4,7 @@ import { Button } from "antd";
 export const ProfileInfo = styled.div`
   background-color: #fff;
   border-radius: 3px;
+  margin-top: 32px;
 
   svg {
     position: absolute;
@@ -59,6 +60,10 @@ export const Flex = styled.div`
     padding: 24px 32px;
     border-bottom: 1px solid #c4c4c4;
     position: relative;
+
+    a {
+      color: #333333;
+    }
   }
 `;
 

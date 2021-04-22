@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import { Container, CancelButton, NextButton } from "./style";
 
@@ -10,7 +11,8 @@ import AddressForm from "./addressForm";
 import PaymentForm from "./paymentForm";
 
 const AddNewUser = () => {
-  const [current, setCurrent] = useState(3);
+  const [current, setCurrent] = useState(1);
+  const location = useLocation();
 
   const handleChange = () => {
     if (current >= 3) setCurrent(1);
@@ -32,16 +34,22 @@ const AddNewUser = () => {
 
   return (
     <MainLayout>
-      <Header text="Add New User" />
+      {location.pathname === "/edit-user" ? (
+        <Header text="Edit User" />
+      ) : (
+        <Header text="Add New User" />
+      )}
       <Container>
         {renderContent()}
         <div className="flex button-contain">
-          <CancelButton
-            style={{ marginRight: "15px" }}
-            onClick={() => setCurrent(1)}
-          >
-            Cancel
-          </CancelButton>
+          <Link to="/user-info">
+            <CancelButton
+              style={{ marginRight: "15px" }}
+              onClick={() => setCurrent(1)}
+            >
+              Cancel
+            </CancelButton>
+          </Link>
           <NextButton onClick={handleChange}>Next</NextButton>
         </div>
       </Container>

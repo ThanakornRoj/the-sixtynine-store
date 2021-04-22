@@ -69,6 +69,11 @@ export const Container = styled.div`
     transform: scale(1.05, 1.05);
     transition: 0.3s;
   }
+
+  .align-items {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const HeaderSection = styled.div`
@@ -76,11 +81,6 @@ export const HeaderSection = styled.div`
   margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
-
-  .align-items {
-    display: flex;
-    align-items: center;
-  }
 
   .ant-picker {
     border: none;
@@ -143,6 +143,7 @@ export const HeaderSection = styled.div`
 
 export const TagContainer = styled.div`
   display: flex;
+  align-items: center;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;

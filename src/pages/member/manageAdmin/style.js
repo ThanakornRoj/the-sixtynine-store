@@ -2,6 +2,17 @@ import styled from "@emotion/styled";
 import { Button, Input } from "antd";
 
 export const Container = styled.div`
+  .ant-table-thead > tr > th {
+    font-weight: 600;
+    background: #ffff;
+    border-bottom: none;
+    padding-left: 32px;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding-left: 32px;
+  }
+
   .ant-table-wrapper {
     background: #ffff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
@@ -53,6 +64,36 @@ export const Container = styled.div`
 
   .ant-input-affix-wrapper:focus {
     border-color: #fd5c28;
+  }
+
+  .ant-input:placeholder-shown {
+    text-transform: uppercase;
+  }
+`;
+
+export const TagContainer = styled.div`
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+
+  .admin-tag {
+    color: #fd5c28;
+
+    margin-right: 32px;
+  }
+
+  .align-items {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-tag {
+    color: #2973ca;
+  }
+
+  svg {
+    margin-right: 10px;
   }
 `;
 
@@ -156,7 +197,7 @@ export const StyleInput = styled(Input)`
   height: 38px;
   border-radius: 3px;
   box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.06);
-  margin-left: 24px;
+  margin-right: 24px;
 
   :hover,
   :focus {
@@ -242,10 +283,9 @@ export const ConfirmButton = styled(Button)`
   text-transform: uppercase;
 
   :hover {
-    background: #ff5c28;
-    border-color: #ff5c28;
+    background: #333333;
+    border-color: #333333;
     color: #fff;
-    transform: scale(1.1, 1.1);
   }
 
   :focus {

@@ -5,7 +5,6 @@ import { SearchOutlined } from "@ant-design/icons";
 
 import {
   Container,
-  DetailButton,
   AddUser,
   HeaderSection,
   StyleInput,
@@ -51,7 +50,9 @@ const ManageUser = () => {
   const renderAction = () => {
     return (
       <Space size={15}>
-        <EditButton>Edit</EditButton>
+        <Link to="/user-info">
+          <EditButton>Edit</EditButton>
+        </Link>
         <svg
           width="23"
           height="26"

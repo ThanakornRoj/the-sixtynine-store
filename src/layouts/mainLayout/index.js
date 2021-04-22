@@ -25,6 +25,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "memberActivity";
   } else if (
     location.pathname === "/manage-user" ||
+    location.pathname === "/add-user" ||
+    location.pathname === "/edit-user" ||
     location.pathname === "/user-info"
   ) {
     keyMenu = children?.type?.name ?? "manageUser";
@@ -53,7 +55,9 @@ const MainLayout = ({ children }) => {
     location.pathname === "/member-activity" ||
     location.pathname === "/manage-user" ||
     location.pathname === "/manage-admin" ||
-    location.pathname === "/user-info"
+    location.pathname === "/user-info" ||
+    location.pathname === "/edit-user" ||
+    location.pathname === "/add-user"
   ) {
     subKeyMenu = children?.type?.name ?? "memberManage";
   }

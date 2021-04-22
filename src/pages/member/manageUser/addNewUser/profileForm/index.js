@@ -15,7 +15,7 @@ import MockAvatar from "../../../../../images/mock-upload-avatar.svg";
 const { Option } = Select;
 
 const ProfileForm = () => {
-  const [currentType, setCurrentType] = useState();
+  const [currentType, setCurrentType] = useState("individual");
 
   const handleChange = (value) => {
     setCurrentType(value);
