@@ -70,8 +70,8 @@ export const ViewButton = styled(Button)`
   border-radius: 3px;
   border: 1px solid #333333;
   color: #333333;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 0.813rem;
+  font-weight: 600;
   text-transform: uppercase;
 
   :hover,

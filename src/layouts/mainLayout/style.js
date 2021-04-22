@@ -55,8 +55,6 @@ export const MainLayoutContainer = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    height: 81%;
-    position: relative;
   }
 
   .ant-menu-item,
@@ -88,8 +86,6 @@ export const MainLayoutContainer = styled.div`
   }
 
   .log-out {
-    position: absolute;
-    bottom: 0;
     border-top: 1px solid #2973ca;
     border-bottom: 1px solid #2973ca;
   }
@@ -100,12 +96,6 @@ export const MainLayoutContainer = styled.div`
 
   .last-menu {
     border: 1px solid #2973ca;
-  }
-
-  @media (max-height: 950px) {
-    .log-out {
-      bottom: 20px;
-    }
   }
 
   @media (max-height: 730px) {
@@ -123,38 +113,8 @@ export const MainLayoutContainer = styled.div`
       }
     }
 
-    .ant-layout-sider-children {
-      min-height: 120vh;
-    }
-  }
-
-  @media (max-height: 600px) {
-    .ant-layout-sider-children {
-      min-height: 140vh;
-    }
-  }
-
-  @media (max-height: 510px) {
-    .ant-layout-sider-children {
-      min-height: 160vh;
-    }
-  }
-
-  @media (max-height: 450px) {
-    .ant-layout-sider-children {
-      min-height: 180vh;
-    }
-  }
-
-  @media (max-height: 400px) {
-    .ant-layout-sider-children {
-      min-height: 210vh;
-    }
-  }
-
-  @media (max-height: 355px) {
-    .ant-layout-sider-children {
-      min-height: 240vh;
+    .log-out {
+      margin-bottom: 30px;
     }
   }
 `;

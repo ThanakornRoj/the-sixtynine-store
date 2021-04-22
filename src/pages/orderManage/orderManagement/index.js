@@ -14,17 +14,12 @@ import {
 import MainLayout from "../../../layouts/mainLayout";
 import Header from "../../../components/header";
 import AllTable from "./allTable";
-import PaymentTable from "./paymentTable";
-import ToShipTable from "./toShipTable";
-import ShippedTable from "./shippedTable";
-import DeliveredTable from "./deliveredTable";
-import CancelTable from "./cancelTable";
-import RefundTable from "./refundTable";
 
 const { TabPane } = Tabs;
 
 const OrderManagement = () => {
   const [renderOrder, setRenderOrder] = useState("all");
+  const [renderTable, setRenderTable] = useState("all");
   const dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
   const OnChange = (e) => {
@@ -32,7 +27,7 @@ const OrderManagement = () => {
   };
 
   const callBack = (key) => {
-    console.log(key);
+    setRenderTable(key);
   };
 
   const salesData = [
@@ -74,44 +69,32 @@ const OrderManagement = () => {
     {
       menu: "all",
       key: "all",
-      component: <AllTable />,
       count: 285,
     },
     {
       menu: "pending payment",
       key: "payment",
-      component: <PaymentTable />,
       count: 80,
     },
     {
       menu: "to ship",
       key: "shipping",
-      component: <ToShipTable />,
       count: 50,
     },
     {
       menu: "shipped",
       key: "shipped",
-      component: <ShippedTable />,
       count: 47,
     },
     {
       menu: "delivered",
       key: "delivered",
-      component: <DeliveredTable />,
       count: 96,
     },
     {
       menu: "canceled",
       key: "cancel",
-      component: <CancelTable />,
       count: 4,
-    },
-    {
-      menu: "return/refund",
-      key: "refund",
-      component: <RefundTable />,
-      count: 8,
     },
   ];
 
@@ -120,10 +103,12 @@ const OrderManagement = () => {
       <HeaderSection>
         <Header text="Order Management" />
         <ButtonFilter>
-          <DatePicker
-            defaultValue={moment("01/01/2021", dateFormatList[0])}
-            format={dateFormatList}
-          />
+          {renderOrder === "all" ? null : (
+            <DatePicker
+              defaultValue={moment("01/01/2021", dateFormatList[0])}
+              format={dateFormatList}
+            />
+          )}
 
           <Radio.Group defaultValue="all" style={{ marginLeft: "15px" }}>
             <Radio.Button value="day" onChange={OnChange}>
@@ -166,7 +151,7 @@ const OrderManagement = () => {
               }
               key={menu.key}
             >
-              {menu.component}
+              <AllTable current={renderTable} />,
             </TabPane>
           ))}
         </MenuContainer>
