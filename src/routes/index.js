@@ -5,7 +5,8 @@ import Home from "../pages/home";
 
 import ProductLists from "../pages/productManage/productLists";
 import MemberActivity from "../pages/member/memberActivity";
-import MemberAction from "../pages/member/memberAction";
+import ManageUser from "../pages/member/manageUser";
+import AddNewUser from "../pages/member/manageUser/addNewUser";
 import ManageAdmin from "../pages/member/menageAdmin";
 import EditPage from "../pages/editPage";
 import BlogManage from "../pages/editPage/blogManage";
@@ -19,7 +20,8 @@ const Router = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/product-lists" component={ProductLists} />
       <Route exact path="/member-activity" component={MemberActivity} />
-      <Route exact path="/member-action" component={MemberAction} />
+      <Route exact path="/manage-user" component={ManageUser} />
+      <Route exact path="/add-user" component={AddNewUser} />
       <Route exact path="/manage-admin" component={ManageAdmin} />
       <Route exact path="/edit-page" component={EditPage} />
       <Route exact path="/blog-manage" component={BlogManage} />

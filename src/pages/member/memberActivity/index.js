@@ -92,8 +92,8 @@ const MemberActivity = () => {
     return (
       <Space size={15}>
         <svg
-          width="20"
-          height="20"
+          width="23"
+          height="26"
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -106,8 +106,8 @@ const MemberActivity = () => {
         </svg>
 
         <svg
-          width="17"
-          height="20"
+          width="20"
+          height="23"
           viewBox="0 0 17 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

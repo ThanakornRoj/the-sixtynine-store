@@ -23,8 +23,8 @@ const MainLayout = ({ children }) => {
 
   if (location.pathname === "/member-activity") {
     keyMenu = children?.type?.name ?? "memberActivity";
-  } else if (location.pathname === "/member-action") {
-    keyMenu = children?.type?.name ?? "memberAction";
+  } else if (location.pathname === "/manage-user") {
+    keyMenu = children?.type?.name ?? "manageUser";
   } else if (location.pathname === "/manage-admin") {
     keyMenu = children?.type?.name ?? "memberAdmin";
   } else if (location.pathname === "/edit-page") {
@@ -48,7 +48,7 @@ const MainLayout = ({ children }) => {
 
   if (
     location.pathname === "/member-activity" ||
-    location.pathname === "/member-action" ||
+    location.pathname === "/manage-user" ||
     location.pathname === "/manage-admin"
   ) {
     subKeyMenu = children?.type?.name ?? "memberManage";
@@ -131,9 +131,9 @@ const MainLayout = ({ children }) => {
                 <Link to="/member-activity" />
                 member activity
               </Menu.Item>
-              <Menu.Item key="memberAction">
-                <Link to="/member-action" />
-                member user
+              <Menu.Item key="manageUser">
+                <Link to="/manage-user" />
+                manage user
               </Menu.Item>
               <Menu.Item key="memberAdmin">
                 <Link to="/manage-admin" />
