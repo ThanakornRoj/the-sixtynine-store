@@ -22,7 +22,7 @@ const OrderManagement = () => {
   const [renderTable, setRenderTable] = useState("all");
   const dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
-  const OnChange = (e) => {
+  const onChange = (e) => {
     setRenderOrder(e.target.value);
   };
 
@@ -65,7 +65,7 @@ const OrderManagement = () => {
     },
   ];
 
-  const MenuTab = [
+  const menuTab = [
     {
       menu: "all",
       key: "all",
@@ -111,16 +111,16 @@ const OrderManagement = () => {
           )}
 
           <Radio.Group defaultValue="all" style={{ marginLeft: "15px" }}>
-            <Radio.Button value="day" onChange={OnChange}>
+            <Radio.Button value="day" onChange={onChange}>
               Day
             </Radio.Button>
-            <Radio.Button value="week" onChange={OnChange}>
+            <Radio.Button value="week" onChange={onChange}>
               Week
             </Radio.Button>
-            <Radio.Button value="month" onChange={OnChange}>
+            <Radio.Button value="month" onChange={onChange}>
               Month
             </Radio.Button>
-            <Radio.Button value="all" onChange={OnChange}>
+            <Radio.Button value="all" onChange={onChange}>
               All
             </Radio.Button>
           </Radio.Group>
@@ -141,7 +141,7 @@ const OrderManagement = () => {
         </SalesSection>
 
         <MenuContainer defaultActiveKey="All" onChange={callBack}>
-          {MenuTab.map((menu, index) => (
+          {menuTab.map((menu, index) => (
             <TabPane
               tab={
                 <>

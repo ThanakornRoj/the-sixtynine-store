@@ -1,4 +1,4 @@
-import React, { userState } from "react";
+import React from "react";
 import { Space, Table, Tag } from "antd";
 
 import { Container, DetailButton, ViewButton } from "./style";
@@ -6,7 +6,7 @@ import { Container, DetailButton, ViewButton } from "./style";
 const AllTable = ({ current }) => {
   let currentColumns;
 
-  const AllTableColumns = [
+  const allTableColumns = [
     {
       title: "Time",
       dataIndex: "time",
@@ -49,7 +49,7 @@ const AllTable = ({ current }) => {
     },
   ];
 
-  const TableColumns = [
+  const tableColumns = [
     {
       title: "Time",
       dataIndex: "time",
@@ -98,9 +98,9 @@ const AllTable = ({ current }) => {
   ];
 
   if (current === "all") {
-    currentColumns = AllTableColumns;
+    currentColumns = allTableColumns;
   } else {
-    currentColumns = TableColumns;
+    currentColumns = tableColumns;
   }
 
   const onChange = (pagination, filters, sorter, extra) => {
