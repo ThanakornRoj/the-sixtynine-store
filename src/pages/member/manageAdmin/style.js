@@ -58,6 +58,10 @@ export const Container = styled.div`
     background: #fead93;
   }
 
+  .ant-table-thead > tr > th {
+    text-transform: uppercase;
+  }
+
   .ant-checkbox-indeterminate .ant-checkbox-inner::after {
     background-color: #fd5c28;
   }
