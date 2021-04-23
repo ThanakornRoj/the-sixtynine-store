@@ -64,23 +64,6 @@ export const Container = styled.div`
   }
 `;
 
-export const DetailButton = styled(Button)`
-  width: 78px;
-  height: 32px;
-  border-radius: 3px;
-  border: 1px solid #999999;
-  color: #999999;
-  font-size: 12px;
-  font-weight: 700;
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #333333;
-    border-color: #333333;
-  }
-`;
-
 export const HeaderSection = styled.div`
   margin-top: 28px;
   margin-bottom: 16px;
@@ -176,9 +159,9 @@ export const AddUser = styled(Button)`
 
   :hover,
   :focus {
-    border-color: #fd5c28;
-    background-color: #fff;
-    color: #fd5c28;
+    border-color: #333333;
+    background-color: #333333;
+    color: #fff;
   }
 `;
 
@@ -188,8 +171,8 @@ export const EditButton = styled(Button)`
   border-radius: 3px;
   border: 1px solid #333333;
   color: #333333;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 0.813rem;
+  font-weight: 600;
   text-transform: uppercase;
 
   :hover,

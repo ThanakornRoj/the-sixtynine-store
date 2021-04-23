@@ -17,6 +17,7 @@ import {
   AdminText,
   ConfirmButton,
   CancelButton,
+  ActionContainer,
 } from "./style";
 
 import MainLayout from "../../../layouts/mainLayout";
@@ -96,7 +97,7 @@ const ManageAdmin = () => {
 
   const renderAction = () => {
     return (
-      <Space size={15}>
+      <ActionContainer size={15}>
         <svg
           width="23"
           height="26"
@@ -123,7 +124,7 @@ const ManageAdmin = () => {
             stroke="currentColor"
           />
         </svg>
-      </Space>
+      </ActionContainer>
     );
   };
 

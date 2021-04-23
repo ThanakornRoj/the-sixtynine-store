@@ -2,17 +2,10 @@ import React from "react";
 import { Table, DatePicker, Tag, Space } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
-import {
-  Container,
-  DetailButton,
-  HeaderSection,
-  StyleInput,
-  TagContainer,
-} from "./style";
+import { Container, HeaderSection, StyleInput, TagContainer } from "./style";
 
 import MainLayout from "../../../layouts/mainLayout";
 import HeaderDashBoard from "../../../components/header";
-import { render } from "react-dom";
 
 const MemberActivity = () => {
   const { RangePicker } = DatePicker;

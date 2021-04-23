@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button, Input } from "antd";
+import { Button, Input, Space } from "antd";
 
 export const Container = styled.div`
   .ant-table-thead > tr > th {
@@ -97,39 +97,11 @@ export const TagContainer = styled.div`
   }
 `;
 
-export const DetailButton = styled(Button)`
-  width: 78px;
-  height: 32px;
-  border-radius: 3px;
-  border: 1px solid #fd5c28;
-  color: #fd5c28;
-  font-size: 12px;
-  font-weight: 700;
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
-  }
-`;
-
-export const DeleteButton = styled(Button)`
-  width: 82px;
-  height: 38px;
-  border-radius: 3px;
-  border: none;
-  background: #fdf0eb;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+export const ActionContainer = styled(Space)`
+  svg:hover {
+    color: #fd5c28;
+    transform: scale(1.05, 1.05);
+    transition: 0.3s;
   }
 `;
 
@@ -140,11 +112,11 @@ export const AssignButton = styled(Button)`
   height: 38px;
   width: 165px;
   border-radius: 3px;
-  background: #fdf0eb;
+  background: #fd5c28;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
   font-size: 12px;
   font-weight: 600;
-  color: #fd5c28;
+  color: #fff;
   text-transform: uppercase;
 
   p {
@@ -155,8 +127,8 @@ export const AssignButton = styled(Button)`
   :hover,
   :focus {
     color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+    background: #333333;
+    border-color: #333333;
   }
 `;
 
@@ -172,10 +144,9 @@ export const DoneButton = styled(Button)`
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
 
   :hover {
-    transform: scale(1.1, 1.1);
     color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+    background: #333333;
+    border-color: #333333;
   }
 
   :focus {

@@ -69,11 +69,6 @@ export const Container = styled.div`
     transform: scale(1.05, 1.05);
     transition: 0.3s;
   }
-
-  .align-items {
-    display: flex;
-    align-items: center;
-  }
 `;
 
 export const HeaderSection = styled.div`
@@ -138,6 +133,11 @@ export const HeaderSection = styled.div`
     border-color: #fd5c28;
     box-shadow: none;
     height: 100%;
+  }
+
+  .align-items {
+    display: flex;
+    align-items: center;
   }
 `;
 

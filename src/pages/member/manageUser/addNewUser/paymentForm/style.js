@@ -58,6 +58,7 @@ export const PaymentBox = styled.div`
   border: 1px solid #999999;
   border-radius: 3px;
   padding: 10px;
+  cursor: pointer;
 
   :hover {
     border: 1.5px solid #fd5c28;
