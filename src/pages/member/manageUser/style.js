@@ -51,35 +51,24 @@ export const Container = styled.div`
   .ant-input-affix-wrapper:focus {
     border-color: #fd5c28;
   }
-`;
 
-export const DetailButton = styled(Button)`
-  width: 78px;
-  height: 32px;
-  border-radius: 3px;
-  border: 1px solid #999999;
-  color: #999999;
-  font-size: 12px;
-  font-weight: 700;
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #333333;
-    border-color: #333333;
+  .ant-space-item {
+    display: flex;
+    align-items: center;
   }
-`;
-export const flex = styled.div`
-  display: flex;
-  align-items: flex-end;
+
+  svg:hover {
+    color: #fd5c28;
+    transform: scale(1.05, 1.05);
+    transition: 0.3s;
+  }
 `;
 
 export const HeaderSection = styled.div`
   margin-top: 28px;
   margin-bottom: 16px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   .ant-picker {
     border: none;
@@ -151,6 +140,45 @@ export const StyleInput = styled(Input)`
   :hover,
   :focus {
     border-color: #fd5c28;
-    box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.06);
+  }
+`;
+
+export const AddUser = styled(Button)`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 161px;
+  height: 38px;
+  background-color: #fd5c28;
+  border-color: #fd5c28;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 24px;
+
+  :hover,
+  :focus {
+    border-color: #333333;
+    background-color: #333333;
+    color: #fff;
+  }
+`;
+
+export const EditButton = styled(Button)`
+  width: 78px;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #333333;
+  color: #333333;
+  font-size: 0.813rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  :hover,
+  :focus {
+    color: #fff;
+    background: #fd5c28;
+    border-color: #fd5c28;
   }
 `;

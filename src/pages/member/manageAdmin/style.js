@@ -1,7 +1,18 @@
 import styled from "@emotion/styled";
-import { Button, Input } from "antd";
+import { Button, Input, Space } from "antd";
 
 export const Container = styled.div`
+  .ant-table-thead > tr > th {
+    font-weight: 600;
+    background: #ffff;
+    border-bottom: none;
+    padding-left: 32px;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding-left: 32px;
+  }
+
   .ant-table-wrapper {
     background: #ffff;
     box-shadow: 1px 1px 144px rgba(0, 0, 0, 0.04);
@@ -54,41 +65,43 @@ export const Container = styled.div`
   .ant-input-affix-wrapper:focus {
     border-color: #fd5c28;
   }
-`;
 
-export const DetailButton = styled(Button)`
-  width: 78px;
-  height: 32px;
-  border-radius: 3px;
-  border: 1px solid #fd5c28;
-  color: #fd5c28;
-  font-size: 12px;
-  font-weight: 700;
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+  .ant-input:placeholder-shown {
+    text-transform: uppercase;
   }
 `;
 
-export const DeleteButton = styled(Button)`
-  width: 82px;
-  height: 38px;
-  border-radius: 3px;
-  border: none;
-  background: #fdf0eb;
+export const TagContainer = styled.div`
+  display: flex;
+  text-transform: uppercase;
   font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
+  font-weight: 700;
 
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+  .admin-tag {
+    color: #fd5c28;
+
+    margin-right: 32px;
+  }
+
+  .align-items {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-tag {
+    color: #2973ca;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+`;
+
+export const ActionContainer = styled(Space)`
+  svg:hover {
+    color: #fd5c28;
+    transform: scale(1.05, 1.05);
+    transition: 0.3s;
   }
 `;
 
@@ -99,11 +112,11 @@ export const AssignButton = styled(Button)`
   height: 38px;
   width: 165px;
   border-radius: 3px;
-  background: #fdf0eb;
+  background: #fd5c28;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
   font-size: 12px;
   font-weight: 600;
-  color: #fd5c28;
+  color: #fff;
   text-transform: uppercase;
 
   p {
@@ -114,8 +127,8 @@ export const AssignButton = styled(Button)`
   :hover,
   :focus {
     color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+    background: #333333;
+    border-color: #333333;
   }
 `;
 
@@ -131,10 +144,9 @@ export const DoneButton = styled(Button)`
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
 
   :hover {
-    transform: scale(1.1, 1.1);
     color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+    background: #333333;
+    border-color: #333333;
   }
 
   :focus {
@@ -156,7 +168,7 @@ export const StyleInput = styled(Input)`
   height: 38px;
   border-radius: 3px;
   box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.06);
-  margin-left: 24px;
+  margin-right: 24px;
 
   :hover,
   :focus {
@@ -242,10 +254,9 @@ export const ConfirmButton = styled(Button)`
   text-transform: uppercase;
 
   :hover {
-    background: #ff5c28;
-    border-color: #ff5c28;
+    background: #333333;
+    border-color: #333333;
     color: #fff;
-    transform: scale(1.1, 1.1);
   }
 
   :focus {
