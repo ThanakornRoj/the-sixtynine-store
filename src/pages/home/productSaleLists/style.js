@@ -90,8 +90,8 @@ export const ViewButton = styled(Button)`
   height: 32px;
   border: 1px solid #333333;
   border-radius: 3px;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 0.813rem;
+  font-weight: 600;
   color: #333333;
   text-transform: uppercase;
 

@@ -11,10 +11,8 @@ export const Container = styled.div`
     background: #ffff;
   }
 
-  table tr th.ant-table-selection-column,
-  table tr td.ant-table-selection-column {
+  .ant-table-column-sorters > span {
     padding-left: 32px;
-    padding-right: 64px;
   }
 
   .ant-table-column-sorter-up.active,
@@ -30,6 +28,10 @@ export const Container = styled.div`
     font-weight: 400;
   }
 
+  .ant-table-cell {
+    padding-left: 48px;
+  }
+
   .ant-table-pagination-right {
     margin: 16px 32px;
   }
@@ -42,10 +44,6 @@ export const Container = styled.div`
     background: #fead93;
   }
 
-  .ant-table-thead > tr > th {
-    text-transform: uppercase;
-  }
-
   .ant-checkbox-indeterminate .ant-checkbox-inner::after {
     background-color: #fd5c28;
   }
@@ -53,41 +51,16 @@ export const Container = styled.div`
   .ant-input-affix-wrapper:focus {
     border-color: #fd5c28;
   }
-`;
 
-export const DetailButton = styled(Button)`
-  width: 78px;
-  height: 32px;
-  border-radius: 3px;
-  border: 1px solid #fd5c28;
-  color: #fd5c28;
-  font-size: 12px;
-  font-weight: 700;
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+  .ant-space-item {
+    display: flex;
+    align-items: center;
   }
-`;
 
-export const DeleteButton = styled(Button)`
-  width: 82px;
-  height: 38px;
-  border-radius: 3px;
-  border: none;
-  background: #fdf0eb;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fd5c28;
-  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
-
-  :hover,
-  :focus {
-    color: #fff;
-    background: #fd5c28;
-    border-color: #fd5c28;
+  svg:hover {
+    color: #fd5c28;
+    transform: scale(1.05, 1.05);
+    transition: 0.3s;
   }
 `;
 
@@ -95,7 +68,29 @@ export const HeaderSection = styled.div`
   margin-top: 28px;
   margin-bottom: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+
+  .ant-picker {
+    border: none;
+    height: 38px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .ant-picker-large .ant-picker-input > input {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .ant-picker:hover,
+  .ant-picker-focused {
+    border-color: #f26736;
+    box-shadow: 0 0 0 2px rgb(246, 81, 59, 0.2);
+  }
+
+  .ant-picker-range .ant-picker-active-bar {
+    background: #f26736;
+  }
 
   .ant-select {
     height: 38px;
@@ -108,6 +103,7 @@ export const HeaderSection = styled.div`
 
   .ant-select:not(.ant-select-customize-input) .ant-select-selector {
     border: none;
+    border-radius: 3px;
   }
 
   .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
@@ -138,12 +134,51 @@ export const StyleInput = styled(Input)`
   width: 241px;
   height: 38px;
   border-radius: 3px;
-  box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.06);
+  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);
   margin-left: 24px;
 
   :hover,
   :focus {
     border-color: #fd5c28;
-    box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.06);
+  }
+`;
+
+export const AddUser = styled(Button)`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 161px;
+  height: 38px;
+  background-color: #fd5c28;
+  border-color: #fd5c28;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 24px;
+
+  :hover,
+  :focus {
+    border-color: #333333;
+    background-color: #333333;
+    color: #fff;
+  }
+`;
+
+export const EditButton = styled(Button)`
+  width: 78px;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #333333;
+  color: #333333;
+  font-size: 0.813rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  :hover,
+  :focus {
+    color: #fff;
+    background: #fd5c28;
+    border-color: #fd5c28;
   }
 `;

@@ -49,6 +49,10 @@ export const Container = styled.div`
     background: #fead93;
   }
 
+  .ant-table-thead > tr > th {
+    text-transform: uppercase;
+  }
+
   svg:hover {
     color: #fd5c28;
     transform: scale(1.05, 1.05);
@@ -66,8 +70,8 @@ export const ViewButton = styled(Button)`
   border-radius: 3px;
   border: 1px solid #333333;
   color: #333333;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 0.813rem;
+  font-weight: 600;
   text-transform: uppercase;
 
   :hover,
