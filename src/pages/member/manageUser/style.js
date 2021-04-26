@@ -9,6 +9,7 @@ export const Container = styled.div`
   .ant-table-thead > tr > th {
     font-weight: 600;
     background: #ffff;
+    text-transform: uppercase;
   }
 
   .ant-table-column-sorters > span {
