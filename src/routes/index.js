@@ -3,18 +3,26 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "../pages/home";
 
+//product-menu
+import ManageProduct from "../pages/productManage/manageProduct";
 import ProductLists from "../pages/productManage/productLists";
+
+//member-menu
 import MemberActivity from "../pages/member/memberActivity";
 import ManageUser from "../pages/member/manageUser";
 import AddNewUser from "../pages/member/manageUser/addNewUser";
 import UserInfo from "../pages/member/manageUser/userInfo";
 import ManageAdmin from "../pages/member/manageAdmin";
+
+//edit-menu
 import EditPage from "../pages/editPage";
+import Banner from "../pages/editPage/banner";
 import BlogManage from "../pages/editPage/blogManage";
 import ManageBlogPage from "../pages/editPage/blogManage/manage";
+
+//order-menu
 import OrderTracking from "../pages/orderManage/orderTracking";
 import OrderManagement from "../pages/orderManage/orderManagement";
-import ManageProduct from "../pages/productManage/manageProduct";
 
 const Router = () => (
   <BrowserRouter>
@@ -28,6 +36,7 @@ const Router = () => (
       <Route exact path="/user-info" component={UserInfo} />
       <Route exact path="/manage-admin" component={ManageAdmin} />
       <Route exact path="/edit-page" component={EditPage} />
+      <Route exact path="/banner-manage" component={Banner} />
       <Route exact path="/blog-manage" component={BlogManage} />
       <Route exact path="/blog-manage/edit-blog" component={ManageBlogPage} />
       <Route exact path="/blog-manage/add-blog" component={ManageBlogPage} />

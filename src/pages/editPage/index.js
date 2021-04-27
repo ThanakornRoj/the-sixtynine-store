@@ -11,7 +11,6 @@ import {
 
 import MainLayout from "../../layouts/mainLayout";
 import Header from "../../components/header";
-import { render } from "react-dom";
 
 const EditPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
