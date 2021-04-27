@@ -49,6 +49,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "productLists";
   } else if (location.pathname === "/add-product") {
     keyMenu = children?.type?.name ?? "addProduct";
+  } else if (location.pathname === "/category-manage") {
+    keyMenu = children?.type?.name ?? "categories";
   } else if (location.pathname === "/order-management") {
     keyMenu = children?.type?.name ?? "orderManagement";
   }
@@ -81,7 +83,8 @@ const MainLayout = ({ children }) => {
   if (
     location.pathname === "/product-lists" ||
     location.pathname === "/product-lists/edit-product" ||
-    location.pathname === "/add-product"
+    location.pathname === "/add-product" ||
+    location.pathname === "/category-manage"
   ) {
     subKeyMenu = children?.type?.name ?? "manageProduct";
   }
@@ -153,7 +156,10 @@ const MainLayout = ({ children }) => {
                 <Link to="/add-product" />
                 add product
               </Menu.Item>
-              <Menu.Item key="categories">Categories</Menu.Item>
+              <Menu.Item key="categories">
+                <Link to="/category-manage" />
+                manage category
+              </Menu.Item>
             </SubMenu>
 
             <SubMenu key="memberManage" title="member">
