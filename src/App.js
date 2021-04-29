@@ -51,7 +51,9 @@ const App = () => (
         .ant-picker-cell-in-view.ant-picker-cell-range-start
           .ant-picker-cell-inner,
         .ant-picker-cell-in-view.ant-picker-cell-range-end
-          .ant-picker-cell-inner {
+          .ant-picker-cell-inner,
+        .ant-picker-week-panel-row-selected td,
+        .ant-picker-week-panel-row-selected:hover td {
           background: #f26736;
         }
 
