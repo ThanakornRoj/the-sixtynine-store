@@ -34,6 +34,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "memberAdmin";
   } else if (location.pathname === "/edit-page") {
     keyMenu = children?.type?.name ?? "pageLists";
+  } else if (location.pathname === "/banner-manage") {
+    keyMenu = children?.type?.name ?? "banner";
   } else if (
     location.pathname === "/blog-manage" ||
     location.pathname === "/blog-manage/edit-blog" ||
@@ -69,6 +71,7 @@ const MainLayout = ({ children }) => {
   }
   if (
     location.pathname === "/edit-page" ||
+    location.pathname === "/banner-manage" ||
     location.pathname === "/blog-manage" ||
     location.pathname === "/blog-manage/edit-blog" ||
     location.pathname === "/blog-manage/add-blog"
@@ -146,7 +149,10 @@ const MainLayout = ({ children }) => {
                 <Link to="/blog-manage" />
                 Blog
               </Menu.Item>
-              <Menu.Item key="banner">Banner</Menu.Item>
+              <Menu.Item key="banner">
+                <Link to="/banner-manage" />
+                Banner
+              </Menu.Item>
             </SubMenu>
 
             <SubMenu key="manageProduct" title="product">
