@@ -49,7 +49,10 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "productLists";
   } else if (location.pathname === "/add-product") {
     keyMenu = children?.type?.name ?? "addProduct";
-  } else if (location.pathname === "/order-management") {
+  } else if (
+    location.pathname === "/order-management" ||
+    location.pathname === "/order-detail"
+  ) {
     keyMenu = children?.type?.name ?? "orderManagement";
   }
 
@@ -74,7 +77,8 @@ const MainLayout = ({ children }) => {
 
   if (
     location.pathname === "/order-tracking" ||
-    location.pathname === "/order-management"
+    location.pathname === "/order-management" ||
+    location.pathname === "/order-detail"
   ) {
     subKeyMenu = children?.type?.name ?? "order";
   }
