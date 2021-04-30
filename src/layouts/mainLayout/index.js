@@ -51,6 +51,8 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "addProduct";
   } else if (location.pathname === "/order-management") {
     keyMenu = children?.type?.name ?? "orderManagement";
+  } else if (location.pathname === "/report") {
+    keyMenu = children?.type?.name ?? "reporting";
   }
 
   if (
@@ -171,7 +173,8 @@ const MainLayout = ({ children }) => {
               </Menu.Item>
             </SubMenu>
 
-            <Menu.Item key="10" className="last-menu">
+            <Menu.Item key="reporting" className="last-menu">
+              <Link to="/report" />
               reporting
             </Menu.Item>
 
