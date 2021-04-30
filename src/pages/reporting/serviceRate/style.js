@@ -13,7 +13,7 @@ export const Left = styled.div`
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 600;
-    margin-left: 24px;
+    margin-left: 32px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -32,6 +32,10 @@ export const Right = styled.div`
     color: #999999;
     text-transform: uppercase;
     margin-top: 20px;
+  }
+
+  svg {
+    transform: scale(1.2, 1.2);
   }
 `;
 

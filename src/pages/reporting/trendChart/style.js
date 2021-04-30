@@ -5,6 +5,20 @@ export const ChartBox = styled.div`
   border-radius: 6px;
 `;
 
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Left = styled.div`
+  width: 80%;
+`;
+
+export const Right = styled.div`
+  width: 20%;
+  padding-bottom: 30px;
+`;
+
 export const Section = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,7 +46,7 @@ export const HeaderText = styled.h1`
 
 export const ChartContainer = styled.div`
   height: 400px;
-  padding: 24px;
+  padding: 24px 0;
 
   .recharts-default-legend {
     display: none;

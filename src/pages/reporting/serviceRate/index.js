@@ -22,7 +22,7 @@ const ServiceRate = () => {
       <BoxHeader text="customer service rate" />
       <Flex>
         <Left>
-          <Space direction="vertical" size={24}>
+          <Space direction="vertical" size={32}>
             {data.map((data, index) => (
               <Flex style={{ color: colors[index], padding: 0 }}>
                 <svg
@@ -46,7 +46,7 @@ const ServiceRate = () => {
               <Pie
                 data={data}
                 innerRadius={50}
-                outerRadius={100}
+                outerRadius={90}
                 fill="#8884d8"
                 paddingAngle={5}
                 dataKey="value"
