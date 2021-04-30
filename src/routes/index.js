@@ -22,6 +22,7 @@ import ManageBlogPage from "../pages/editPage/blogManage/manage";
 //order-menu
 import OrderTracking from "../pages/orderManage/orderTracking";
 import OrderManagement from "../pages/orderManage/orderManagement";
+import OrderDetail from "../pages/orderManage/orderDetail";
 import ManageProduct from "../pages/productManage/manageProduct";
 import Reporting from "../pages/reporting";
 
@@ -44,6 +45,7 @@ const Router = () => (
       <Route exact path="/blog-manage/add-blog" component={ManageBlogPage} />
       <Route exact path="/order-tracking" component={OrderTracking} />
       <Route exact path="/order-management" component={OrderManagement} />
+      <Route exact path="/order-detail" component={OrderDetail} />
       <Route exact path="/add-product" component={ManageProduct} />
       <Route
         exact

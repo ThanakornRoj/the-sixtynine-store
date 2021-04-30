@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Space, Table, Tag } from "antd";
 
 import { Container, DetailButton, ViewButton } from "./style";
@@ -118,11 +119,17 @@ const AllTable = ({ current }) => {
 
   const renderAction = () => {
     if (current === "all") {
-      return <DetailButton>Detail</DetailButton>;
+      return (
+        <Link to="/order-detail">
+          <DetailButton>Detail</DetailButton>
+        </Link>
+      );
     } else
       return (
         <Space size={10}>
-          <ViewButton>View</ViewButton>
+          <Link to="order-detail">
+            <ViewButton>View</ViewButton>
+          </Link>
           <div className="align-items">
             <svg
               width="23"

@@ -51,10 +51,14 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "productLists";
   } else if (location.pathname === "/add-product") {
     keyMenu = children?.type?.name ?? "addProduct";
+  } else if (
+    location.pathname === "/order-management" ||
+    location.pathname === "/order-detail"
+  ) {
+    keyMenu = children?.type?.name ?? "orderManagement";
   } else if (location.pathname === "/category-manage") {
     keyMenu = children?.type?.name ?? "categories";
-  } else if (location.pathname === "/order-management") {
-    keyMenu = children?.type?.name ?? "orderManagement";
+  } 
   } else if (location.pathname === "/report") {
     keyMenu = children?.type?.name ?? "reporting";
   }
@@ -81,7 +85,8 @@ const MainLayout = ({ children }) => {
 
   if (
     location.pathname === "/order-tracking" ||
-    location.pathname === "/order-management"
+    location.pathname === "/order-management" ||
+    location.pathname === "/order-detail"
   ) {
     subKeyMenu = children?.type?.name ?? "order";
   }

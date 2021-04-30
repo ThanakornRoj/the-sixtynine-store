@@ -157,7 +157,7 @@ const ManageUser = () => {
 
   return (
     <MainLayout>
-      <HeaderDashBoard text="member action" />
+      <HeaderDashBoard text="manage user" />
       <HeaderSection>
         <Link to="/add-user">
           <AddUser>

@@ -7,6 +7,7 @@ export const Container = styled.div`
     background: #ffff;
     border-bottom: none;
     padding-left: 32px;
+    text-transform: uppercase;
   }
 
   .ant-table-tbody > tr > td {
@@ -20,11 +21,6 @@ export const Container = styled.div`
 
   .ant-table {
     min-height: 700px;
-  }
-
-  .ant-table-thead > tr > th {
-    font-weight: 600;
-    background: #ffff;
   }
 
   table tr th.ant-table-selection-column,
@@ -56,10 +52,6 @@ export const Container = styled.div`
 
   .ant-table-tbody > tr.ant-table-row-selected:hover > td {
     background: #fead93;
-  }
-
-  .ant-table-thead > tr > th {
-    text-transform: uppercase;
   }
 
   .ant-checkbox-indeterminate .ant-checkbox-inner::after {
