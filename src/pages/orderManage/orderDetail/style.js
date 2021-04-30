@@ -98,17 +98,16 @@ export const ResultSection = styled(Space)`
   }
 
   .ant-space-item {
-    width: 23%;
+    width: 25%;
   }
 `;
 
 export const DoneButton = styled(Button)`
-  width: 82px;
-  height: 38px;
+  width: 105px;
+  height: 44px;
   border-radius: 3px;
   border: none;
   background: #fd5c28;
-  font-size: 12px;
   font-weight: 600;
   color: #fff;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.06);

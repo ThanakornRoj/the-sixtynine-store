@@ -85,6 +85,7 @@ const OrderDetail = () => {
     },
     {
       total: renderTotalPrice(200000.99, true),
+      discount: 0,
     },
   ];
 
@@ -148,7 +149,7 @@ const OrderDetail = () => {
               style={{ marginLeft: "32px" }}
               span={10}
             >
-              จัดส่งเร็จ
+              จัดส่งสำเร็จ
             </Col>
           </OrderNumber>
         </div>
