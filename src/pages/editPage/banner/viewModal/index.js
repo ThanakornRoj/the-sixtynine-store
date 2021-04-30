@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Space, Upload } from "antd";
-import { PlusOutlined } from "@ant-design/icons";
+import { Upload, Popconfirm, Button, message } from "antd";
 
 import { DeleteButton, SaveButton, StyleModal } from "./style";
 
@@ -16,6 +15,7 @@ function getBase64(file) {
 }
 
 const ViewBanner = ({ visible, onCancel, edit }) => {
+  const text = "คุณต้องการลบรูปภาพนี้ใช่หรือไม่?";
   const [fileListOne, setFileListOne] = useState([
     {
       url: UploadMock,
@@ -24,6 +24,10 @@ const ViewBanner = ({ visible, onCancel, edit }) => {
 
   const handleChange = (fileList) => {
     setFileListOne(fileList);
+  };
+
+  const confirm = () => {
+    message.success("คุณได้ลบรูปภาพแล้ว");
   };
 
   const uploadButton = (
@@ -79,7 +83,15 @@ const ViewBanner = ({ visible, onCancel, edit }) => {
       </Upload>
       <div className="button-align">
         {edit ? (
-          <DeleteButton>Delete</DeleteButton>
+          <Popconfirm
+            placement="left"
+            title={text}
+            onConfirm={confirm}
+            okText="Yes"
+            cancelText="No"
+          >
+            <DeleteButton>Delete</DeleteButton>
+          </Popconfirm>
         ) : (
           <DeleteButton onClick={onCancel}>Cancel</DeleteButton>
         )}

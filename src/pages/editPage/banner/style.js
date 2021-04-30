@@ -12,6 +12,7 @@ export const ContentContainer = styled.div`
     background: #ffff;
     border-bottom: none;
     padding-left: 32px;
+    text-transform: uppercase;
   }
 
   .ant-table-tbody > tr > td {

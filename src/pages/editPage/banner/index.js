@@ -43,7 +43,7 @@ const Banner = () => {
       width: "75%",
     },
     {
-      title: "ACTION",
+      title: "action",
       dataIndex: "action",
       width: "25%",
     },
