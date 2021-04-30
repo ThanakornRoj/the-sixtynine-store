@@ -58,7 +58,6 @@ const MainLayout = ({ children }) => {
     keyMenu = children?.type?.name ?? "orderManagement";
   } else if (location.pathname === "/category-manage") {
     keyMenu = children?.type?.name ?? "categories";
-  } 
   } else if (location.pathname === "/report") {
     keyMenu = children?.type?.name ?? "reporting";
   }
@@ -142,7 +141,6 @@ const MainLayout = ({ children }) => {
                 <Link to="/order-management" />
                 Order Management
               </Menu.Item>
-              <Menu.Item key="report">Report</Menu.Item>
             </SubMenu>
 
             <SubMenu key="Edit" title="edit page">

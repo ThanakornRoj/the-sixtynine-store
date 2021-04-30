@@ -23,7 +23,6 @@ import ManageBlogPage from "../pages/editPage/blogManage/manage";
 import OrderTracking from "../pages/orderManage/orderTracking";
 import OrderManagement from "../pages/orderManage/orderManagement";
 import OrderDetail from "../pages/orderManage/orderDetail";
-import ManageProduct from "../pages/productManage/manageProduct";
 import Reporting from "../pages/reporting";
 
 const Router = () => (
