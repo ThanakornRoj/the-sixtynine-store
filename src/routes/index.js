@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "../pages/home";
 
 import ProductLists from "../pages/productManage/productLists";
+import Category from "../pages/productManage/manageCategory";
 import MemberActivity from "../pages/member/memberActivity";
 import ManageUser from "../pages/member/manageUser";
 import AddNewUser from "../pages/member/manageUser/addNewUser";
@@ -16,12 +17,14 @@ import OrderTracking from "../pages/orderManage/orderTracking";
 import OrderManagement from "../pages/orderManage/orderManagement";
 import OrderDetail from "../pages/orderManage/orderDetail";
 import ManageProduct from "../pages/productManage/manageProduct";
+import Reporting from "../pages/reporting";
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/product-lists" component={ProductLists} />
+      <Route exact path="/category-manage" component={Category} />
       <Route exact path="/member-activity" component={MemberActivity} />
       <Route exact path="/manage-user" component={ManageUser} />
       <Route exact path="/add-user" component={AddNewUser} />
@@ -41,6 +44,7 @@ const Router = () => (
         path="/product-lists/edit-product"
         component={ManageProduct}
       />
+      <Route exact path="/report" component={Reporting} />
     </Switch>
   </BrowserRouter>
 );

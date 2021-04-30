@@ -1,7 +1,6 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const Section = styled.div`
-  border-bottom: 1px solid #ededed;
   padding: 14px 24px;
 `;
 
